@@ -1,13 +1,47 @@
-// pages/work.tsx
-import React from 'react';
-import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+"use client";
+import React from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
+import { useState } from "react";
 
-export  const Work = () => {
+export const Work = () => {
+  const projects = [
+    {
+      src: "/assets/work/bar.png",
+      alt: "Bar Project",
+      title: "Bar Website",
+      description:
+        "This project is a bar website with a drinks gallery and contact section.",
+    },
+    {
+      src: "/assets/work/fashion.png",
+      alt: "Fashion Project",
+      title: "Fashion Store",
+      description:
+        "An online fashion store that showcases trending fashion items.",
+    },
+    {
+      src: "/assets/work/goats.png",
+      alt: "Goat Farming",
+      title: "Goat Farm Website",
+      description:
+        "A goat farming website to help customers learn more about our livestock.",
+    },
+    {
+      src: "/assets/work/gallery.png",
+      alt: "Gallery Project",
+      title: "Photography Gallery",
+      description:
+        "A beautiful online portfolio for professional photography work.",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
       <div className="container mx-auto">
@@ -15,15 +49,17 @@ export  const Work = () => {
           {/* Text Section */}
           <div className="w-full xl:w-[50%] xl:h-[40px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">01</div>
+              <div className="projectCount text-8xl leading-none font-extrabold text-red-500 text-outline">
+                {String(activeIndex + 1).padStart(2, "0")}
+              </div>
+
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                Frontend Project
+                {projects[activeIndex].title}
               </h2>
-              <p className="text-white/60">
-                Mawuse Drinks and Bar is a fictional bar website that aims to create an inviting space for customers to learn about and explore the bars offerings.
-                The website features an About Us section, Services, Drinks gallery, and Contact Information, all aimed at enhancing the customer experience.
+              <p className="description text-white/60">
+                {projects[activeIndex].description}
               </p>
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 text-red-500">
                 <li className="text-xl text-accent">HTML 5,</li>
                 <li className="text-xl text-accent">CSS 3,</li>
                 <li className="text-xl text-accent">JavaScript</li>
@@ -43,7 +79,10 @@ export  const Work = () => {
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path fillRule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"></path>
+                      <path
+                        fillRule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"
+                      ></path>
                     </svg>
                   </button>
                 </a>
@@ -69,66 +108,28 @@ export  const Work = () => {
 
           {/* Image Section */}
           <div className="w-full xl:w-[50%]">
-            <Swiper modules={[Navigation, Pagination]} navigation pagination>
-              <SwiperSlide>
-                <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/assets/work/bar.png"
-                      alt="Bar Project"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation
+              pagination
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            >
+              {projects.map((project, index) => (
+                <SwiperSlide key={index}>
+                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={project.src}
+                        alt={project.alt}
+                        layout="fill"
+                        objectFit="cover"
+                        priority
+                      />
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/assets/work/fashion.png"
-                      alt="Fashion Project"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/assets/work/goats.png"
-                      alt="Goats Project"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
-                    <Image
-                      src="/assets/work/gallery.png"
-                      alt="Gallery Project"
-                      layout="fill"
-                      objectFit="cover"
-                      priority
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>
@@ -138,3 +139,97 @@ export  const Work = () => {
 };
 
 export default Work;
+
+// const projects = [
+//   {
+//     src: "/assets/work/bar.png",
+//     alt: "Bar Project",
+//     title: "Bar Website",
+//     description:
+//       "This project is a bar website with a drinks gallery and contact section.",
+//   },
+//   {
+//     src: "/assets/work/fashion.png",
+//     alt: "Fashion Project",
+//     title: "Fashion Store",
+//     description:
+//       "An online fashion store that showcases trending fashion items.",
+//   },
+//   {
+//     src: "/assets/work/goats.png",
+//     alt: "Goat Farming",
+//     title: "Goat Farm Website",
+//     description:
+//       "A goat farming website to help customers learn more about our livestock.",
+//   },
+//   {
+//     src: "/assets/work/gallery.png",
+//     alt: "Gallery Project",
+//     title: "Photography Gallery",
+//     description:
+//       "A beautiful online portfolio for professional photography work.",
+//   },
+// ];
+
+// export const Work = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   return (
+//     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
+//       <div className="container mx-auto">
+//         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+//           {/* Text Section */}
+//           <div className="w-full xl:w-[50%] xl:h-[40px] flex flex-col xl:justify-between order-2 xl:order-none">
+//             <div className="flex flex-col gap-[30px] h-[50%]">
+//               {/* Project Count */}
+//               <div className="projectCount text-8xl leading-none font-extrabold text-red-500">
+//                 {String(activeIndex + 1).padStart(2, "0")}
+//               </div>
+
+//               {/* Project Title */}
+//               <h2 className="text-[42px] font-bold leading-none text-white capitalize">
+//                 {projects[activeIndex].title}
+//               </h2>
+
+//               {/* Project Description */}
+//               <p className="description text-white/60">
+//                 {projects[activeIndex].description}
+//               </p>
+
+//               <div className="border border-white/20"></div>
+//             </div>
+//           </div>
+
+//           {/* Image Section */}
+//           <div className="w-full xl:w-[50%]">
+//             <Swiper
+//               modules={[Navigation, Pagination]}
+//               navigation
+//               pagination
+//               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+//             >
+//               {projects.map((project, index) => (
+//                 <SwiperSlide key={index}>
+//                   <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+//                     <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+//                     <div className="relative w-full h-full">
+//                       <Image
+//                         src={project.src}
+//                         alt={project.alt}
+//                         layout="fill"
+//                         objectFit="cover"
+//                         priority
+//                       />
+//                     </div>
+//                   </div>
+//                 </SwiperSlide>
+//               ))}
+//             </Swiper>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Work;
