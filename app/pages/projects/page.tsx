@@ -68,7 +68,7 @@ export  const Work = () => {
           </div>
 
           {/* Image Section */}
-          {/* <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[50%]">
             <Swiper modules={[Navigation, Pagination]} navigation pagination>
               <SwiperSlide>
                 <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
@@ -130,7 +130,7 @@ export  const Work = () => {
                 </div>
               </SwiperSlide>
             </Swiper>
-          </div> */}
+          </div>
         </div>
       </div>
     </section>

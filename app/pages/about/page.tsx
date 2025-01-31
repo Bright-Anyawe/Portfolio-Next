@@ -3,17 +3,17 @@ import { PersonalImage } from "@/app/components/PersonalImage";
 export default function About() {
   return (
     <section className="container h-full py-12 xl:py-24">
-      <div className="flex flex-col xl:flex-row items-center justify-between">
+      <div className="flex flex-col xl:flex-row items-center justify-between gap-12">
         {/* Image Section */}
         <PersonalImage />
 
         {/* Text Section */}
-        <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl">
+        <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl mb-14">
           <span className="text-xl text-accent">Web Developer</span>
-          <h1 className="h1 mb-6">
-            Get to know <br /> <span className="text-accent">Anyawe :)</span>
+          <h1 className="h1 mb-6 font-medium text-5xl">
+            Get to know <br /> <span className="text-accent text-red-500 ">Anyawe :)</span>
           </h1>
-          <p className="text-black leading-relaxed">
+          <p className="text-white text-xl leading-relaxed">
             My name is <span className="identity">Anyawe Bright</span>, and I am
             a passionate front-end developer based in Ghana. I am dedicated to
             continuously improving my skills through study and practical

@@ -3,9 +3,9 @@ import { PersonalImage } from "./components/PersonalImage";
 
 export default function Home() {
   const stats = [
-    { value: "12", label: "Months of experience" },
+    { value: "24", label: "Months of experience" },
     { value: "6", label: "Projects completed" },
-    { value: "6", label: "Languages Learnt" },
+    { value: "1", label: "Languages Learnt" },
   ];
   return (
     <>
@@ -21,7 +21,7 @@ export default function Home() {
           a difference together in the tech industry.
         </p> */}
           <h2 className="text-red-500">I EMBRACE THE DIGITAL WORLD</h2>
-          <p className="max-w-[500px] mb-9 text-white">
+          <p className="max-w-[500px] mb-9 text-white text-lg">
             Searching for someone who is eager to learn, proficient in
             communicating clients, who thinks of new and better methods to solve
             problems, and enjoys using his tech talents to assist others in
@@ -31,7 +31,7 @@ export default function Home() {
             Explore my work to witness my inventiveness! Should you be
             interested, I am available for employment.
           </p>
-          <div className="flex flex-col xl:flex-row items-center gap-8">
+          <div className="flex flex-col xl:flex-row items-center gap-12">
             {/* Download Resume Button */}
             <a
               href="/resume.pdf"
@@ -103,7 +103,7 @@ export default function Home() {
                 <span className="text-4xl font-extrabold xl:text-6xl text-accent">
                   {stat.value}
                 </span>
-                <p className="max-w-[150px] leading-snug text-black/80">
+                <p className="max-w-[150px] leading-snug text-red-500">
                   {stat.label}
                 </p>
               </div>
