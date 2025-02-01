@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const ContactSection = () => {
   return (
-    <section className="container mx-auto px-6 py-12 lg:py-20">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="container mx-auto p-0 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left Side - Image */}
 
         <div className="hidden lg:block">
           <Image
-            className="dark:invert w-full h-auto rounded-2xl shadow-lg object-cover"
+            className="dark:invert w-full h-584px shadow-lg object-cover"
             src="/image.png"
             alt="Contact"
             width={480}
@@ -18,7 +18,7 @@ const ContactSection = () => {
         </div>
 
         {/* Right Side - Form */}
-        <div className="bg-white p-8 shadow-lg rounded-2xl max-w-lg w-full">
+        <div className="bg-white p-8 shadow-lg  max-w-lg w-full">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">CONTACT ME</h2>
           <p className="text-gray-600 mb-6">
             You might want to develop a website, application or discuss anything

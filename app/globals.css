@@ -11,7 +11,21 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --bg-light: #ffffff;
+    --text-light: #333;
+    --bg-dark: #121212;
+    --text-dark: #ffffff;
   }
+}
+
+.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 body {
