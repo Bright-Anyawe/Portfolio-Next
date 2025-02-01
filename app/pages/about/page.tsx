@@ -18,10 +18,11 @@ export default function About() {
             a passionate front-end developer based in Ghana. I am dedicated to
             continuously improving my skills through study and practical
             application, using code to solve real-world problems—a pursuit that
-            brings me immense satisfaction. From a young age, I have been
+            brings me immense satisfaction.
+            <br />
+            <br />
+            From a young age, I have been
             fascinated by how modern software and games function.
-            <br />
-            <br />
             This curiosity drove me to ask questions, conduct research, and
             leverage available resources, ultimately leading me to pursue a
             career in web development. I have worked on various projects,
