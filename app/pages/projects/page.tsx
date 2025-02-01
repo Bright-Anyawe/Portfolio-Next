@@ -11,32 +11,31 @@ import { useState } from "react";
 export const Work = () => {
   const projects = [
     {
-      src: "/assets/work/bar.png",
-      alt: "Bar Project",
-      title: "Bar Website",
+      src: "/assets/Figma design.png",
+      alt: "Figma design",
+      live: "https://phinance-management-app.netlify.app/",
+      gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
+      title: "Figma Design Website",
       description:
-        "This project is a bar website with a drinks gallery and contact section.",
+        "This project is a figma design website that was designed for Yottanet company clients",
     },
     {
-      src: "/assets/work/fashion.png",
-      alt: "Fashion Project",
-      title: "Fashion Store",
+      src: "/assets/e-commerce-platform-landing-page.avif",
+      live: "https://ecommerce-frontend-livid-mu.vercel.app/",
+      gitHubLink: "https://github.com/Bright-Anyawe/Ecommerce_fireBase",
+      alt: "E-commerce website",
+      title: "E-commerce Store",
       description:
-        "An online fashion store that showcases trending fashion items.",
+        "Scalable React application with dynamic product pages, cart functionality, and authentication.",
     },
     {
-      src: "/assets/work/goats.png",
-      alt: "Goat Farming",
-      title: "Goat Farm Website",
+      src: "/assets/cop logo.jpeg",
+      live: "https://golf-estate-ministry-cop.vercel.app/",
+      gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
+      alt: "COP",
+      title: "Golf Estate Assembly(COP) Website",
       description:
-        "A goat farming website to help customers learn more about our livestock.",
-    },
-    {
-      src: "/assets/work/gallery.png",
-      alt: "Gallery Project",
-      title: "Photography Gallery",
-      description:
-        "A beautiful online portfolio for professional photography work.",
+        "A website for the Golf Estate Assembly(COP) to help members learn more about the church.",
     },
   ];
 
@@ -67,7 +66,7 @@ export const Work = () => {
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
                 {/* Live Site and GitHub Links */}
-                <a target="_blank" href="https://mawuse-bar.vercel.app">
+                <a target="_blank" href={`${projects[activeIndex].live}`}>
                   <button className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                     <svg
                       stroke="currentColor"
@@ -86,7 +85,7 @@ export const Work = () => {
                     </svg>
                   </button>
                 </a>
-                <a target="_blank" href="https://github.com/pasiama/MawuseBar">
+                <a target="_blank" href={`${projects[activeIndex].gitHubLink}`}>
                   <button className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                     <svg
                       stroke="currentColor"
