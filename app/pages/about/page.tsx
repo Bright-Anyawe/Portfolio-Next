@@ -1,5 +1,5 @@
 import { PersonalImage } from "@/app/components/PersonalImage";
-
+import "@/app/styles/about.css"; 
 export default function About() {
   return (
     <section className="container h-full py-12 xl:py-24">
@@ -9,7 +9,7 @@ export default function About() {
 
         {/* Text Section */}
         <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl mb-14">
-          <span className="text-xl text-accent">Web Developer</span>
+          <div className="webType text-xl text-accent">Web Developer</div>
           <h1 className="h1 mb-6 font-medium text-5xl">
             Get to know <br /> <span className="text-accent text-red-500 ">Anyawe :)</span>
           </h1>
@@ -21,6 +21,8 @@ export default function About() {
             brings me immense satisfaction.
             <br />
             <br />
+
+            {/* ReadMore button should be here */}
             From a young age, I have been
             fascinated by how modern software and games function.
             This curiosity drove me to ask questions, conduct research, and
