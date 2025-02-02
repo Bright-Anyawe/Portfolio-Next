@@ -131,6 +131,14 @@ export const Work = () => {
               ))}
             </Swiper>
           </div>
+
+          <style>
+            {`
+    .swiper-button-next, .swiper-button-prev {
+      color: red !important;
+    }
+  `}
+          </style>
         </div>
       </div>
     </section>

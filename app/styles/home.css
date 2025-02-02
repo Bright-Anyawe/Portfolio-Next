@@ -48,48 +48,103 @@
 }
 
 .typing {
-    font-family: monospace; /* Optional: give it a typewriter look */
-    white-space: nowrap;    /* Prevent text wrap */
-    overflow: hidden;       /* Hide the overflowing text */
-    display: inline-block;  /* Keep it in line */
-    position: relative;     /* For pseudo-element positioning */
+  font-family: monospace; /* Optional: give it a typewriter look */
+  white-space: nowrap; /* Prevent text wrap */
+  overflow: hidden; /* Hide the overflowing text */
+  display: inline-block; /* Keep it in line */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Typing effect applies only to a pseudo-element */
+.typing::after {
+  content: ""; /* Empty content initially */
+  display: inline-block;
+  width: 100%; /* Ensures full text is always present */
+  background: white; /* Covers the text to simulate typing */
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  animation: typing 4s steps(40, end) infinite;
+}
+
+/* The caret animation */
+.typing::before {
+  content: "|"; /* The blinking cursor */
+  display: inline-block;
+  margin-left: 5px; /* Adjust spacing */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Keyframe for typing effect */
+@keyframes typing {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* Keyframe for blinking caret */
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* .IntroType {
+    overflow: hidden;
+  display: block; 
+  border-right: 3px solid currentColor; 
+  width: 0;
+    animation: typing 6s steps(1000, end) infinite, blink 0.6s step-end infinite;
+  } */
+  .IntroType {
+    display: inline-block;
+    position: relative;
   }
   
-  /* Typing effect applies only to a pseudo-element */
-  .typing::after {
-    content: ""; /* Empty content initially */
-    display: inline-block;
-    width: 100%; /* Ensures full text is always present */
-    background: white; /* Covers the text to simulate typing */
+  .line {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0; /* Start hidden */
+    animation: typing 1.5s steps(40, end) forwards;
+  }
+  
+  /* Cursor effect applied to the entire text */
+  .IntroType::after {
+    content: "|"; /* Cursor */
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
-    height: 100%;
-    animation: typing 4s steps(40, end) infinite;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: currentColor;
+    animation: blink 0.6s step-end infinite;
   }
   
-  /* The caret animation */
-  .typing::before {
-    content: "|"; /* The blinking cursor */
-    display: inline-block;
-    margin-left: 5px; /* Adjust spacing */
-    animation: blink-caret 0.75s step-end infinite;
-  }
-  
-  /* Keyframe for typing effect */
+  /* Typing effect */
   @keyframes typing {
-    from { width: 100%; }
-    to { width: 0; }
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
   
-  /* Keyframe for blinking caret */
-  @keyframes blink-caret {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+  /* Blink effect for the single cursor */
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
   }
-  
-
-
   /* @keyframes sheen {
     100% {
       transform: rotateZ(60deg) translate(1em, -9em);

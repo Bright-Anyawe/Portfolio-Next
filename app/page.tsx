@@ -21,16 +21,32 @@ export default function Home() {
           </h1>
 
           <h2 className="text-red-500">I EMBRACE THE DIGITAL WORLD</h2>
-          <p className="max-w-[500px] mb-9 text-white text-lg">
-            Searching for someone who is eager to learn, proficient in
-            communicating clients, who thinks of new and better methods to solve
-            problems, and enjoys using his tech talents to assist others in
-            solving difficulties? You&apos;re in the correct place. I can assist
-            you with developing features, projects, or accessible and
-            user-friendly websites as well as testing your web application.
-            Explore my work to witness my inventiveness! Should you be
-            interested, I am available for employment.
+          <p className="IntroType max-w-[500px] mb-9 text-white text-lg">
+            <span className="line" style={{ animationDelay: "0s" }}>
+              Searching for someone who is eager to learn, proficient in
+              communicating clients,
+            </span>
+            <span className="line" style={{ animationDelay: "1.5s" }}>
+              who thinks of new and better methods to solve problems,
+            </span>
+            <span className="line" style={{ animationDelay: "3s" }}>
+              and enjoys using his tech talents to assist others in solving
+              difficulties?
+            </span>
+            <span className="line" style={{ animationDelay: "4.5s" }}>
+              You&apos;re in the correct place. I can assist you with developing
+              features,
+            </span>
+            <span className="line" style={{ animationDelay: "6s" }}>
+              projects, or accessible and user-friendly websites as well as
+              testing your web application.
+            </span>
+            <span className="line" style={{ animationDelay: "7.5s" }}>
+              Explore my work to witness my inventiveness! Should you be
+              interested, I am available for employment.
+            </span>
           </p>
+
           <HomeButton />
         </div>
 
