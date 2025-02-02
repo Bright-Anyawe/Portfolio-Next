@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
 
-export const Work = () => {
+ const Projects = () => {
   const projects = [
     {
       src: "/assets/Figma design.png",
@@ -145,12 +145,4 @@ export const Work = () => {
   );
 };
 
-export default Work;
-
-
-
-
-
-
-
-
+export default Projects;
