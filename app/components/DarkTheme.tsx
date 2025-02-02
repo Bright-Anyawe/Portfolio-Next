@@ -5,7 +5,6 @@ import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState(() => {
-    // Check for stored theme, default to "light"
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") || "light";
     }
@@ -13,7 +12,6 @@ const ThemeToggle = () => {
   });
 
   useEffect(() => {
-    // Apply theme on mount
     document.documentElement.classList.remove("light", "dark");
     document.documentElement.classList.add(theme);
     localStorage.setItem("theme", theme);

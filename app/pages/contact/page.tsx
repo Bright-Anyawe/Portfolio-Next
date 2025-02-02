@@ -10,21 +10,21 @@ const ContactSection = () => {
   return (
     <section className="container mx-auto p-0 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-        {/* Left Side - Image */}
+        {}
 
         <div className="bg-blue-600 h-full text-white p-8 space-y-6 md:block hidden">
   <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
   <p className="text-lg">We&apos;re here to help you!</p>
   <hr className="border-t border-white opacity-50" />
 
-  {/* Contact Details */}
+  {}
   <div className="space-y-4">
-    {/* Phone */}
+    {}
     <div className="flex items-center gap-4">
       <PhoneIcon className="w-6 h-6 text-white" />
       <span className="text-lg">+123-456-7890</span>
     </div>
-    {/* Website */}
+    {}
     <div className="flex items-center gap-4">
       <GlobeAltIcon className="w-6 h-6 text-white" />
       <a
@@ -36,7 +36,7 @@ const ContactSection = () => {
         www.reallygreatsite.com
       </a>
     </div>
-    {/* Email */}
+    {}
     <div className="flex items-center gap-4">
       <MapIcon className="w-6 h-6 text-white" />
       <a
@@ -46,7 +46,7 @@ const ContactSection = () => {
         hello@reallygreatsite.com
       </a>
     </div>
-    {/* Address */}
+    {}
     <div className="flex items-center gap-4">
       <MapPinIcon className="w-6 h-6 text-white" />
       <span className="text-lg">123 Anywhere St., Any City</span>
@@ -55,7 +55,7 @@ const ContactSection = () => {
 </div>
 
 
-        {/* Right Side - Form */}
+        {}
         <div className="bg-white p-8 shadow-lg  max-w-lg w-full">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">CONTACT ME</h2>
           <p className="text-gray-600 mb-6">
@@ -117,7 +117,6 @@ const ContactSection = () => {
                 id="messageMe"
                 placeholder="Your Message"
                 className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
-                //   rows="4"
                 required
               ></textarea>
             </div>

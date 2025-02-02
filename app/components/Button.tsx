@@ -5,7 +5,7 @@ export default function HomeButton() {
   return (
     <>
       <div className="flex flex-col xl:flex-row items-center gap-12">
-        {/* Download Resume Button */}
+        {}
         <a
           href="/resume.pdf"
           download
@@ -14,9 +14,9 @@ export default function HomeButton() {
           <span className="link-hover">Download Resume</span>
         </a>
 
-        {/* Social Links */}
+        {}
         <div className="flex gap-6">
-          {/* GitHub */}
+          {}
           <Link
             href="https://github.com/pasiama"
             target="_blank"
@@ -38,7 +38,7 @@ export default function HomeButton() {
             </div>
           </Link>
 
-          {/* LinkedIn */}
+          {}
           <Link
             href="https://www.linkedin.com/in/phoebe-asiama-8a6134205/"
             target="_blank"

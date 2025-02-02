@@ -15,7 +15,7 @@ export default function Home() {
           <div className="typing text-2xl">Web Developer</div>
           <h1 className=" devTextEl h1 mb-6 text-6xl font-medium">
             Hello I am <br />{" "}
-            <span className=" text-accent text-5xl text-red-500 font-extrabold">
+            <span className="text-accent text-5xl text-gradient font-extrabold tracking-wide uppercase">
               Anyawe Bright
             </span>
           </h1>

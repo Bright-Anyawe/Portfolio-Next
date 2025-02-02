@@ -1,4 +1,4 @@
-"use client"; // Ensures the component runs on the client side
+"use client"; 
 
 import { useState, useRef } from "react";
 import { PersonalImage } from "@/app/components/PersonalImage";
@@ -6,15 +6,15 @@ import "@/app/styles/about.css";
 
 export default function About() {
   const [expanded, setExpanded] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null); // Reference for animation
+  const contentRef = useRef<HTMLDivElement>(null); 
 
   return (
     <section className="container h-full py-12 xl:py-24">
       <div className="flex flex-col xl:flex-row items-center justify-between gap-12">
-        {/* Image Section */}
+        {}
         <PersonalImage />
 
-        {/* Text Section */}
+        {}
         <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl mb-14">
           <div className="webType text-xl text-accent">Web Developer</div>
           <h1 className="h1 mb-6 font-medium text-5xl">
@@ -22,7 +22,7 @@ export default function About() {
             <span className="text-accent text-red-500">Anyawe :)</span>
           </h1>
 
-          {/* Initial Visible Text */}
+          {}
           <p className="text-white text-xl leading-relaxed">
             My name is <span className="identity">Anyawe Bright</span>, and I am
             a passionate front-end developer based in Ghana. I am dedicated to
@@ -31,7 +31,7 @@ export default function About() {
             brings me immense satisfaction.
           </p>
 
-          {/* Expanding Content with Smooth Animation */}
+          {}
           <div
             ref={contentRef}
             className="overflow-hidden transition-max-height duration-700 ease-in-out"
@@ -61,7 +61,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* Read More / Read Less Button */}
+          {}
           <button
             onClick={() => setExpanded(!expanded)}
             className="mt-4 px-6 py-2 border border-accent text-accent rounded-full text-lg font-semibold hover:bg-accent hover:text-primary transition-all duration-300"

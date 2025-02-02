@@ -1,19 +1,13 @@
 // "use client"
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import {  Inter } from "next/font/google";
 import "./globals.css";
 import SideNav from "./components/SideNav";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 
  const inter = Inter({ subsets: ['latin'] });
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
 
 export const metadata: Metadata = {
   title: "Anyawe Bright",
@@ -28,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${inter.className} antialiased`}
+        className={` ${inter.className} antialiased`}
       >
         <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
           <div className="w-full flex-none md:w-64 ">

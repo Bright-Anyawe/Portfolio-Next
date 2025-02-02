@@ -9,14 +9,12 @@
   --text-dark: #ffffff;
 }
 
-/* Light Mode */
 html.light {
   @apply bg-white text-black;
   background-color: var(--bg-light);
   color: var(--text-light);
 }
 
-/* Dark Mode */
 html.dark {
   @apply bg-gray-900 text-white;
   background-color: var(--bg-dark);
