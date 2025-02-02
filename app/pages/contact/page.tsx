@@ -1,3 +1,9 @@
+import {
+  PhoneIcon,
+  GlobeAltIcon,
+  MapIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const ContactSection = () => {
@@ -6,16 +12,48 @@ const ContactSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* Left Side - Image */}
 
-        <div className="hidden lg:block">
-          <Image
-            className="dark:invert w-full h-584px shadow-lg object-cover"
-            src="/image.png"
-            alt="Contact"
-            width={480}
-            height={680}
+        <div className="bg-blue-600 h-full text-white p-8 space-y-6 md:block hidden">
+  <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
+  <p className="text-lg">We&apos;re here to help you!</p>
+  <hr className="border-t border-white opacity-50" />
 
-          />
-        </div>
+  {/* Contact Details */}
+  <div className="space-y-4">
+    {/* Phone */}
+    <div className="flex items-center gap-4">
+      <PhoneIcon className="w-6 h-6 text-white" />
+      <span className="text-lg">+123-456-7890</span>
+    </div>
+    {/* Website */}
+    <div className="flex items-center gap-4">
+      <GlobeAltIcon className="w-6 h-6 text-white" />
+      <a
+        href="https://www.reallygreatsite.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-lg underline"
+      >
+        www.reallygreatsite.com
+      </a>
+    </div>
+    {/* Email */}
+    <div className="flex items-center gap-4">
+      <MapIcon className="w-6 h-6 text-white" />
+      <a
+        href="mailto:hello@reallygreatsite.com"
+        className="text-lg underline"
+      >
+        hello@reallygreatsite.com
+      </a>
+    </div>
+    {/* Address */}
+    <div className="flex items-center gap-4">
+      <MapPinIcon className="w-6 h-6 text-white" />
+      <span className="text-lg">123 Anywhere St., Any City</span>
+    </div>
+  </div>
+</div>
+
 
         {/* Right Side - Form */}
         <div className="bg-white p-8 shadow-lg  max-w-lg w-full">
