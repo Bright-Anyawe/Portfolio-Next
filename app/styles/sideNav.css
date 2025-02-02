@@ -1,5 +1,8 @@
-.brand-name {
-  background: linear-gradient(to right, #ff4b5c, #ff9c6e);
-  -webkit-background-clip: text;
-  color: transparent;
-}
+
+
+
+.text-gradient {
+    background: linear-gradient(to right, #d3cdcd, #ff9c6e);
+    -webkit-background-clip: text;
+    color: transparent;
+  }

@@ -9,7 +9,7 @@ export default function SideNav() {
         className="mb-2 flex h-20  items-end justify-center rounded-md bg-red-600 p-4 md:h-40"
         href="/"
       >
-        <div className="brand-name w-32 flex align-middle text-white md:w-40 font-extrabold text-3xl tracking-wide md:text-4xl text-gradient">
+        <div className="brand-name flex align-middle text-white md:w-40 font-extrabold text-3xl tracking-wide md:text-4xl text-gradient">
           Anyawe B.
         </div>{" "}
       </Link>

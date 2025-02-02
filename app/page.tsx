@@ -12,45 +12,30 @@ export default function Home() {
     <>
       <section className="flex flex-col items-center xl:items-start xl:flex-row gap-8 p-6 xl:p-12">
         <div className="text-center xl:text-left order-2 xl:order-none">
-          <div className="typing text-2xl">Web Developer</div>
-          <h1 className=" devTextEl h1 mb-6 text-6xl font-medium">
-            Hello I am <br />{" "}
-            <span className="text-accent text-5xl text-gradient font-extrabold tracking-wide uppercase">
+          <div className="webType text-2xl">Web Developer</div>
+          <h1 className="devTextEl h1 mb-6 text-6xl font-medium">
+            Hello I am <br />
+            <div className="home-name text-accent text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-gradient font-extrabold tracking-wide uppercase">
               Anyawe Bright
-            </span>
+            </div>
           </h1>
 
           <h2 className="text-red-500">I EMBRACE THE DIGITAL WORLD</h2>
           <p className="IntroType max-w-[500px] mb-9 text-white text-lg">
-            <span className="line" style={{ animationDelay: "0s" }}>
-              Searching for someone who is eager to learn, proficient in
-              communicating clients,
-            </span>
-            <span className="line" style={{ animationDelay: "1.5s" }}>
-              who thinks of new and better methods to solve problems,
-            </span>
-            <span className="line" style={{ animationDelay: "3s" }}>
-              and enjoys using his tech talents to assist others in solving
-              difficulties?
-            </span>
-            <span className="line" style={{ animationDelay: "4.5s" }}>
-              You&apos;re in the correct place. I can assist you with developing
-              features,
-            </span>
-            <span className="line" style={{ animationDelay: "6s" }}>
-              projects, or accessible and user-friendly websites as well as
-              testing your web application.
-            </span>
-            <span className="line" style={{ animationDelay: "7.5s" }}>
-              Explore my work to witness my inventiveness! Should you be
-              interested, I am available for employment.
-            </span>
+            Searching for someone who is eager to learn, proficient in
+            communicating clients, who thinks of new and better methods to solve
+            problems, and enjoys using his tech talents to assist others in
+            solving difficulties? You&apos;re in the correct place. I can assist
+            you with developing features, projects, or accessible and
+            user-friendly websites as well as testing your web application.
+            Explore my work to witness my inventiveness! Should you be
+            interested, I am available for employment.
           </p>
 
           <HomeButton />
         </div>
 
-        {/* Personal Image */}
+        {}
         <PersonalImage />
       </section>
 

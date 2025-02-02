@@ -10,7 +10,6 @@
   animation: focus-in-expand-fwd 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-
 @-webkit-keyframes focus-in-expand-fwd {
   0% {
     letter-spacing: -0.5em;
@@ -47,90 +46,71 @@
   }
 }
 
-.typing {
-  font-family: monospace;
-  white-space: nowrap;
+
+.webType {
+  display: inline-block;
   overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid currentColor;
+  animation: typing 4s steps(12, end) infinite, blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+.IntroType {
   display: inline-block;
   position: relative;
 }
 
-.typing::after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-  background: white;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  animation: typing 4s steps(40, end) infinite;
+.line {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 1.5s steps(40, end) forwards;
+  position: relative;
 }
 
-.typing::before {
+.line::after {
   content: "|";
-  display: inline-block;
-  margin-left: 5px;
-  animation: blink-caret 0.75s step-end infinite;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: currentColor;
+  animation: blink 0.6s step-end infinite;
+  animation-delay: inherit;
 }
 
 @keyframes typing {
   from {
+    width: 0;
+  }
+  to {
     width: 100%;
   }
-  to {
-    width: 0;
-  }
 }
 
-@keyframes blink-caret {
-  from,
-  to {
+@keyframes blink {
+  50% {
     opacity: 0;
   }
-  50% {
-    opacity: 1;
-  }
 }
-
-  .IntroType {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .line {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 1.5s steps(40, end) forwards;
-    position: relative;
-  }
-  
-  .line::after {
-    content: "|";
-    position: absolute;
-    right: 0;
-    top: 0;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: currentColor;
-    animation: blink 0.6s step-end infinite;
-    animation-delay: inherit;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-  
