@@ -13,7 +13,7 @@ const ContactSection = () => {
 
         <div className="bg-blue-600 h-full text-white p-8 space-y-6 md:block hidden">
   <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
-  <p className="text-lg">We&apos;re here to help you!</p>
+  <p className="text-lg">I am here to help you!</p>
   <hr className="border-t border-white opacity-50" />
 
   {}
@@ -21,34 +21,34 @@ const ContactSection = () => {
     {}
     <div className="flex items-center gap-4">
       <PhoneIcon className="w-6 h-6 text-white" />
-      <span className="text-lg">+123-456-7890</span>
+      <span className="text-lg">+233 59-417-2522</span>
     </div>
     {}
     <div className="flex items-center gap-4">
       <GlobeAltIcon className="w-6 h-6 text-white" />
       <a
-        href="https://www.reallygreatsite.com"
+        href="https://portfolio-next-kappa-seven.vercel.app/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-lg underline"
       >
-        www.reallygreatsite.com
+        www.anyawe-bright-portfolio.com
       </a>
     </div>
     {}
     <div className="flex items-center gap-4">
       <MapIcon className="w-6 h-6 text-white" />
       <a
-        href="mailto:hello@reallygreatsite.com"
+        href="https://workspace.google.com/intl/en-US/gmail/"
         className="text-lg underline"
       >
-        hello@reallygreatsite.com
+        brightanyawe55@gmail.com
       </a>
     </div>
     {}
     <div className="flex items-center gap-4">
       <MapPinIcon className="w-6 h-6 text-white" />
-      <span className="text-lg">123 Anywhere St., Any City</span>
+      <span className="text-lg">Tema-Ghana, Golf city</span>
     </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import { useState, useRef } from "react";
 import { PersonalImage } from "@/app/components/PersonalImage";
@@ -6,7 +6,7 @@ import "@/app/styles/about.css";
 
 export default function About() {
   const [expanded, setExpanded] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null); 
+  const contentRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="container h-full py-12 xl:py-24">
@@ -64,7 +64,9 @@ export default function About() {
           {}
           <button
             onClick={() => setExpanded(!expanded)}
-            className="mt-4 px-6 py-2 border border-accent text-accent rounded-full text-lg font-semibold hover:bg-accent hover:text-primary transition-all duration-300"
+            className="mt-4 px-6 py-3 border border-accent text-accent rounded-full text-lg font-semibold 
+             bg-transparent hover:bg-accent hover:text-white hover:shadow-md 
+             transition-all duration-300 ease-in-out transform hover:-translate-y-1"
           >
             {expanded ? "Read Less" : "Read More"}
           </button>
