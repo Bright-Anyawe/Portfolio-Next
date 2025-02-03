@@ -7,7 +7,7 @@ export default function HomeButton() {
       <div className="flex flex-col xl:flex-row items-center gap-12">
         {}
         <a
-          href="/resume.pdf"
+          href="./Web Developer[Cv].pdf"
           download
           className="sheen-button justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors bg-transparent text-accent border border-accent hover:bg-accent-hover h-[56px] px-8 text-sm tracking-[2px] uppercase flex items-center gap-2"
         >
@@ -18,7 +18,7 @@ export default function HomeButton() {
         <div className="flex gap-6">
           {}
           <Link
-            href="https://github.com/pasiama"
+            href=""
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"

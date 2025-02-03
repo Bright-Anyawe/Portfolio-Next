@@ -48,7 +48,7 @@ const ContactSection = () => {
     {}
     <div className="flex items-center gap-4">
       <MapPinIcon className="w-6 h-6 text-white" />
-      <span className="text-lg">Tema-Ghana, Golf city</span>
+      <span className="text-lg">Tema-Golf city,Ghana</span>
     </div>
   </div>
 </div>
