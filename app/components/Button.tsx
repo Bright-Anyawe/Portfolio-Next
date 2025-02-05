@@ -18,7 +18,7 @@ export default function HomeButton() {
         <div className="flex gap-6">
           {}
           <Link
-            href="https://github.com/Bright-Anyawe/Portfolio-Next/blob/main/README.md"
+            href="https://github.com/Bright-Anyawe"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon"

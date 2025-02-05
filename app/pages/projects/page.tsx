@@ -7,42 +7,62 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
+const projects = [
+  {
+    src: "/assets/e-commerce-platform-landing-page.avif",
+    live: "https://ecommerce-frontend-livid-mu.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Ecommerce_fireBase",
+    alt: "E-commerce website",
+    tools: `HTML 5, CSS3, React`,
+    title: "E-commerce Store",
+    description:
+      "Scalable React application with dynamic product pages, cart functionality, and authentication.",
+  },
+  {
+    src: "/assets/image.png",
+    alt: "Figma design",
+    live: "https://phinance-management-app.netlify.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
+    tools: `HTML 5, CSS3`,
+    title: "Figma Design Website",
+    description:
+      "This project is a figma design website that was designed for Yottanet company clients",
+  },
+  {
+    src: "/assets/hero-desktop.png",
+    live: "https://nextjs-dashboard-azure-eight-39.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Nextjs-Dashboard",
+    alt: "Financial management dashboard",
+    tools: `HTML 5, CSS3, React, Nextjs`,
+    title: "Financial  Dashboard",
+    description:
+      "A financial management dashboard that helps you keep track of your invoices and expenses.",
+  },
+  {
+    src: "/assets/Todo list 2.jpg",
+    live: "https://goal-getter.pages.dev/display/inbox",
+    gitHubLink: "https://github.com/Bright-Anyawe/Todo_app_react",
+    alt: "Todo App",
+    tools: `HTML 5, CSS3, React`,
+    title: "Goal Getter",
+    description:
+      "A professional todo app that helps you keep track of your goals, create projects and add tasks.",
+  },
+  
+  {
+    src: "/assets/cop logo.jpeg",
+    live: "https://golf-estate-ministry-cop.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
+    alt: "COP",
+    tools: `HTML 5, CSS3, React`,
+
+    title: "Golf Estate Assembly(COP) Website",
+    description:
+      "An open-source website for the Golf Estate Assembly(COP) to help members learn more about the church.",
+  },
+];
 
 const Projects = () => {
-  const projects = [
-    {
-      src: "/assets/Figma design.png",
-      alt: "Figma design",
-      live: "https://phinance-management-app.netlify.app/",
-      gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
-      tools: `HTML 5, CSS3`,
-      title: "Figma Design Website",
-      description:
-        "This project is a figma design website that was designed for Yottanet company clients",
-    },
-    {
-      src: "/assets/e-commerce-platform-landing-page.avif",
-      live: "https://ecommerce-frontend-livid-mu.vercel.app/",
-      gitHubLink: "https://github.com/Bright-Anyawe/Ecommerce_fireBase",
-      alt: "E-commerce website",
-      tools: `HTML 5, CSS3, React`,
-      title: "E-commerce Store",
-      description:
-        "Scalable React application with dynamic product pages, cart functionality, and authentication.",
-    },
-    {
-      src: "/assets/cop logo.jpeg",
-      live: "https://golf-estate-ministry-cop.vercel.app/",
-      gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
-      alt: "COP",
-      tools: `HTML 5, CSS3, React`,
-
-      title: "Golf Estate Assembly(COP) Website",
-      description:
-        "A website for the Golf Estate Assembly(COP) to help members learn more about the church.",
-    },
-  ];
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (

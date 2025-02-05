@@ -4,9 +4,9 @@ import HomeButton from "./components/Button";
 
 export default function Home() {
   const stats = [
-    { value: "24", label: "Months of experience" },
+    { value: "25", label: "Months of experience" },
     { value: "6", label: "Projects completed" },
-    { value: "1", label: "Languages Learnt" },
+    { value: "1", label: "Language Learnt" },
   ];
   
   return (
