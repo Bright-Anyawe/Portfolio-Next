@@ -12,47 +12,46 @@ const ContactSection = () => {
         {}
 
         <div className="bg-blue-600 h-full text-white p-8 space-y-6 md:block hidden">
-  <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
-  <p className="text-lg">I am here to help you!</p>
-  <hr className="border-t border-white opacity-50" />
+          <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
+          <p className="text-lg">I am here to help you!</p>
+          <hr className="border-t border-white opacity-50" />
 
-  {}
-  <div className="space-y-4">
-    {}
-    <div className="flex items-center gap-4">
-      <PhoneIcon className="w-6 h-6 text-white" />
-      <span className="text-lg">+233 59-417-2522</span>
-    </div>
-    {}
-    <div className="flex items-center gap-4">
-      <GlobeAltIcon className="w-6 h-6 text-white" />
-      <a
-        href="https://portfolio-next-kappa-seven.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-lg underline"
-      >
-        www.anyawe-bright-portfolio.com
-      </a>
-    </div>
-    {}
-    <div className="flex items-center gap-4">
-      <MapIcon className="w-6 h-6 text-white" />
-      <a
-        href="https://workspace.google.com/intl/en-US/gmail/"
-        className="text-lg underline"
-      >
-        brightanyawe55@gmail.com
-      </a>
-    </div>
-    {}
-    <div className="flex items-center gap-4">
-      <MapPinIcon className="w-6 h-6 text-white" />
-      <span className="text-lg">Tema-Golf city,Ghana</span>
-    </div>
-  </div>
-</div>
-
+          {}
+          <div className="space-y-4">
+            {}
+            <div className="flex items-center gap-4">
+              <PhoneIcon className="w-6 h-6 text-white" />
+              <span className="text-lg">+233 59-417-2522</span>
+            </div>
+            {}
+            <div className="flex items-center gap-4">
+              <GlobeAltIcon className="w-6 h-6 text-white" />
+              <a
+                href="https://portfolio-next-kappa-seven.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg underline"
+              >
+                www.anyawe-bright-portfolio.com
+              </a>
+            </div>
+            {}
+            <div className="flex items-center gap-4">
+              <MapIcon className="w-6 h-6 text-white" />
+              <a
+                href="https://workspace.google.com/intl/en-US/gmail/"
+                className="text-lg underline"
+              >
+                brightanyawe55@gmail.com
+              </a>
+            </div>
+            {}
+            <div className="flex items-center gap-4">
+              <MapPinIcon className="w-6 h-6 text-white" />
+              <span className="text-lg">Tema-Golf city,Ghana</span>
+            </div>
+          </div>
+        </div>
 
         {}
         <div className="bg-white p-8 shadow-lg  max-w-lg w-full">
@@ -82,7 +81,7 @@ const ContactSection = () => {
                 name="Name"
                 id="name"
                 placeholder="Your Name"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 px-4 py-2 border rounded-lg bg-black text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -99,7 +98,7 @@ const ContactSection = () => {
                 name="Email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 px-4 py-2 border rounded-lg bg-black text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
@@ -115,7 +114,7 @@ const ContactSection = () => {
                 name="Message"
                 id="messageMe"
                 placeholder="Your Message"
-                className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full mt-1 px-4 py-2 border rounded-lg bg-black text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500"
                 required
               ></textarea>
             </div>

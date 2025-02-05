@@ -38,16 +38,16 @@ const projects = [
     description:
       "A financial management dashboard that helps you keep track of your invoices and expenses.",
   },
-  {
-    src: "/assets/Todo list 2.jpg",
-    live: "https://goal-getter.pages.dev/display/inbox",
-    gitHubLink: "https://github.com/Bright-Anyawe/Todo_app_react",
-    alt: "Todo App",
-    tools: `HTML 5, CSS3, React`,
-    title: "Goal Getter",
-    description:
-      "A professional todo app that helps you keep track of your goals, create projects and add tasks.",
-  },
+  // {
+  //   src: "/assets/Todo list 2.jpg",
+  //   live: "https://goal-getter.pages.dev/display/inbox",
+  //   gitHubLink: "https://github.com/Bright-Anyawe/Todo_app_react",
+  //   alt: "Todo App",
+  //   tools: `HTML 5, CSS3, React`,
+  //   title: "Goal Getter",
+  //   description:
+  //     "A professional todo app that helps you keep track of your goals, create projects and add tasks.",
+  // },
   
   {
     src: "/assets/cop logo.jpeg",
