@@ -9,9 +9,12 @@ import SideNav from "./components/SideNav";
  const inter = Inter({ subsets: ['latin'] });
 
 
-export const metadata: Metadata = {
+ export const metadata: Metadata = {
   title: "Anyawe Bright",
   description: "Personal portfolio of Anyawe Bright",
+  verification: {
+    google: "tWnVO6Rxy61sAPY_hEzheUeNFXUyWhtYKPRmNbvqsKw"
+  }
 };
 
 export default function RootLayout({

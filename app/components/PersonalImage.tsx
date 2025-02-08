@@ -12,8 +12,9 @@ export const PersonalImage = () => {
         <Image
           src="/assets/In person-portfolio-face-edit.jpg"
           alt="Anyawe"
-          layout="fill"
-          objectFit="cover" 
+          fill
+          sizes="(max-width: 768px) 250px, (max-width: 1024px) 400px, 506px"
+          objectFit="cover"
           priority
         />
       </div>

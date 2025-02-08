@@ -15,7 +15,7 @@ export default function Home() {
       <section className="flex flex-col items-center xl:items-start xl:flex-row gap-8 p-6 xl:p-12 max-w-screen-2xl mx-auto">
         {}
         <div className="text-center xl:text-left order-2 xl:order-none">
-          <div className="webType text-2xl xl:text-3xl 2xl:text-4xl">
+          <div className="webIntro text-2xl xl:text-3xl 2xl:text-4xl">
             Web Developer
           </div>
           <h1 className="devTextEl h1 mb-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-medium leading-tight">
