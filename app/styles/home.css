@@ -46,34 +46,39 @@
   }
 }
 
-
-
-
-.webIntro {
+.devSkill {
+  
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid currentColor;
-  animation: typing 4s steps(22, end) infinite, blink 0.6s step-end infinite;
+  border-right: 3px solid currentColor; 
+  width: 0; 
+  animation: typing 6s steps(24, end) forwards, blink 0.6s step-end infinite;
 }
 
+
 @keyframes typing {
-  0% {
+  from {
     width: 0;
   }
-  50% {
-    width: 30%;
+  
+  70% {
+    width: 100%;
   }
-  100% {
+  to {
     width: 0;
   }
 }
+
 
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
+
+
+
 
 
 
