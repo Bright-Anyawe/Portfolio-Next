@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const Typewriter = () => {
   const words = ["Web Developer", "Frontend Developer", "Responsive Designer"];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const colors = ["white", "green", "yellow"];
+  const colors = ["white", "#cd3a4e", "yellow"];
 
   // Update the word every 4 seconds (or adjust as needed)
   useEffect(() => {
