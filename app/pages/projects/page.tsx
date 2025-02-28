@@ -10,13 +10,23 @@ import { useState } from "react";
 const projects = [
   {
     src: "/assets/e-commerce-platform-landing-page.avif",
-    live: "https://ecommerce-frontend-livid-mu.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Ecommerce_fireBase",
+    live: "https://tech-spark-phi.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/trendy-cart-spark",
     alt: "E-commerce website",
     tools: `HTML 5, CSS3, React`,
     title: "E-commerce Store",
     description:
       "Scalable React application with dynamic product pages, cart functionality, and authentication.",
+  },
+  {
+    src: "/assets/skillTest2.png",
+    live: "https://skill-test-dashboard-five.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Internship-project",
+    alt: "Skill Test dashboard",
+    tools: `HTML 5, CSS3,  Nextjs`,
+    title: "Skill Test  Dashboard",
+    description:
+      "This internship project involves developing a dashboard application using React and Next.js. The goal is to create a user-friendly interface that allows users to track their skills and progress over time.",
   },
   {
     src: "/assets/image.png",
@@ -28,38 +38,18 @@ const projects = [
     description:
       "This project is a figma design website that was designed for Yottanet company clients",
   },
-  {
-    src: "/assets/hero-desktop.png",
-    live: "https://nextjs-dashboard-azure-eight-39.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Nextjs-Dashboard",
-    alt: "Financial management dashboard",
-    tools: `HTML 5, CSS3, React, Nextjs`,
-    title: "Financial  Dashboard",
-    description:
-      "A financial management dashboard that helps you keep track of your invoices and expenses.",
-  },
-  // {
-  //   src: "/assets/Todo list 2.jpg",
-  //   live: "https://goal-getter.pages.dev/display/inbox",
-  //   gitHubLink: "https://github.com/Bright-Anyawe/Todo_app_react",
-  //   alt: "Todo App",
-  //   tools: `HTML 5, CSS3, React`,
-  //   title: "Goal Getter",
-  //   description:
-  //     "A professional todo app that helps you keep track of your goals, create projects and add tasks.",
-  // },
-  
-  {
-    src: "/assets/cop logo.jpeg",
-    live: "https://golf-estate-ministry-cop.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
-    alt: "COP",
-    tools: `HTML 5, CSS3, React`,
 
-    title: "Golf Estate Assembly(COP) Website",
-    description:
-      "An open-source website for the Golf Estate Assembly(COP) to help members learn more about the church.",
-  },
+  // {
+  //   src: "/assets/cop logo.jpeg",
+  //   live: "https://golf-estate-ministry-cop.vercel.app/",
+  //   gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
+  //   alt: "COP",
+  //   tools: `HTML 5, CSS3, React`,
+
+  //   title: "Golf Estate Assembly(COP) Website",
+  //   description:
+  //     "An open-source website for the Golf Estate Assembly(COP) to help members learn more about the church.",
+  // },
 ];
 
 const Projects = () => {
@@ -148,18 +138,25 @@ const Projects = () => {
               navigation
               pagination
               onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              // Optional: Add responsive breakpoints
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 1 },
+              }}
             >
               {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                  <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                  <div className="relative group bg-pink-50/20 aspect-video">
+                    <div className="absolute inset-0 bg-black/10 z-10"></div>
                     <div className="relative w-full h-full">
                       <Image
                         src={project.src}
                         alt={project.alt}
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: "contain" }}
+                        quality={100}
                         priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     </div>
                   </div>

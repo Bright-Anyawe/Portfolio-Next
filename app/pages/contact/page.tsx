@@ -12,7 +12,7 @@ const ContactSection = () => {
         {}
 
         <div className="bg-blue-600 h-full text-white p-8 space-y-6 md:block hidden">
-          <h2 className="text-4xl font-extrabold uppercase">Contact Us</h2>
+          <h2 className="text-4xl font-extrabold uppercase">Contact Me</h2>
           <p className="text-lg">I am here to help you!</p>
           <hr className="border-t border-white opacity-50" />
 
