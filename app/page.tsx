@@ -1,6 +1,6 @@
 import "./styles/home.css";
 import { PersonalImage } from "./components/PersonalImage";
-import HomeButton from "./components/Button";
+import DownloadButton from "./components/Button";
 import TypeWriter from "./components/TypeWriter";
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
             interested, I am available for employment.
           </p>
 
-          <HomeButton />
+          <DownloadButton />
         </div>
 
         {}
