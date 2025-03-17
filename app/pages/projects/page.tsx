@@ -20,7 +20,7 @@ const projects = [
   },
   {
       src: "/assets/fruits.jpeg",
-      live: "https://fruits-lelo.vercel.app/",
+      live: "https://fruit-lelo.vercel.app/",
       gitHubLink: "https://github.com/Bright-Anyawe/Fruit-lelo",
       alt: "Skill Test dashboard",
       tools: `HTML 5, CSS3,  React`,
@@ -28,16 +28,7 @@ const projects = [
       description:
         "This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React",
     },
-  // {
-  //   src: "/assets/skillTest2.png",
-  //   live: "https://skill-test-dashboard-five.vercel.app/",
-  //   gitHubLink: "https://github.com/Bright-Anyawe/Internship-project",
-  //   alt: "Skill Test dashboard",
-  //   tools: `HTML 5, CSS3,  Nextjs`,
-  //   title: "Skill Test  Dashboard",
-  //   description:
-  //     "This internship project involves developing a dashboard application using React and Next.js. The goal is to create a user-friendly interface that allows users to track their skills and progress over time.",
-  // },
+    
   {
     src: "/assets/image.png",
     alt: "Figma design",
