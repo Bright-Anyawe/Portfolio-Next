@@ -19,16 +19,17 @@ const projects = [
       "Scalable React application with dynamic product pages, cart functionality, and authentication.",
   },
   {
-      src: "/assets/fruits.jpeg",
-      live: "https://fruit-lelo.vercel.app/",
-      gitHubLink: "https://github.com/Bright-Anyawe/Fruit-lelo",
-      alt: "Skill Test dashboard",
-      tools: `HTML 5, CSS3,  React`,
-      title: "A fruit-lelo website",
-      description:
-        "This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React",
-    },
-    
+    src: "/assets/Microscopic visioneer.webp",
+    live: "https://wsi-viewer-2.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/wsi-viewer",
+    alt: "Whole Slide Image",
+    tools: `HTML 5, CSS3,  React[Nextjs]`,
+    title: "Whole Slide Image Viewer",
+    description:
+      "This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.",
+  },
+ 
+
   {
     src: "/assets/image.png",
     alt: "Figma design",
@@ -39,18 +40,17 @@ const projects = [
     description:
       "This project is a figma design website that was designed for Yottanet company clients",
   },
-
-  // {
-  //   src: "/assets/cop logo.jpeg",
-  //   live: "https://golf-estate-ministry-cop.vercel.app/",
-  //   gitHubLink: "https://github.com/Bright-Anyawe/Golf_Estate_Ministry_Cop",
-  //   alt: "COP",
-  //   tools: `HTML 5, CSS3, React`,
-
-  //   title: "Golf Estate Assembly(COP) Website",
-  //   description:
-  //     "An open-source website for the Golf Estate Assembly(COP) to help members learn more about the church.",
-  // },
+  {
+    src: "/assets/fruits.jpeg",
+    live: "https://fruit-lelo.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Fruit-lelo",
+    alt: "Skill Test dashboard",
+    tools: `HTML 5, CSS3,  React`,
+    title: "A fruit-lelo website",
+    description:
+      "This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React",
+  },
+ 
 ];
 
 const Projects = () => {
