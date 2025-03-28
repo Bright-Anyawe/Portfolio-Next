@@ -1,7 +1,8 @@
 import "./styles/home.css";
 import { PersonalImage } from "./components/PersonalImage";
 import DownloadButton from "./components/Button";
-import TypeWriter from "./components/TypeWriter";
+import TypewriterComponent from "./components/TypeWriter";
+import WelcomePopup from "./components/WelcomePopup";
 
 export default function Home() {
   const stats = [
@@ -11,13 +12,11 @@ export default function Home() {
   ];
   
   return (
-    <>
-      {}
+    <main>
+      <WelcomePopup />
       <section className="flex flex-col items-center xl:items-start xl:flex-row gap-8 p-6 xl:p-12 max-w-screen-2xl mx-auto">
-        {}
         <div className="text-center xl:text-left order-2 xl:order-none">
-          {}
-          <TypeWriter />
+          <TypewriterComponent />
           <h1 className="devTextEl h1 mb-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-medium leading-tight">
             Hello I am <br />
             <div className="home-name text-accent text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-gradient font-extrabold tracking-wide uppercase">
@@ -42,11 +41,9 @@ export default function Home() {
           <DownloadButton />
         </div>
 
-        {}
         <PersonalImage />
       </section>
 
-      {}
       <section className="py-12 xl:py-0">
         <div className="container mx-auto max-w-screen-2xl">
           <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none justify-center xl:justify-start">
@@ -66,6 +63,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

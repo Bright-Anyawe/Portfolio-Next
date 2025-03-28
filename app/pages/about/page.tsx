@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { PersonalImage } from "@/app/components/PersonalImage";
 import "@/app/styles/about.css";
+import TypewriterComponent from "@/app/components/TypeWriter";
 
 export default function About() {
   const [expanded, setExpanded] = useState(false);
@@ -16,7 +17,8 @@ export default function About() {
 
         {}
         <div className="text-center xl:text-left order-2 xl:order-none max-w-2xl mb-14">
-          <div className="webType text-xl text-accent">Web Developer</div>
+          {/* <div className="webType text-xl text-accent">Web Developer</div> */}
+          <TypewriterComponent/>
           <h1 className="h1 mb-6 font-medium text-5xl">
             Get to know <br />{" "}
             <span className="text-accent text-red-500">Anyawe :)</span>
