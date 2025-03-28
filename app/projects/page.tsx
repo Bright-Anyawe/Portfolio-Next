@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
+
 const projects = [
   {
     src: "/assets/e-commerce-platform-landing-page.avif",

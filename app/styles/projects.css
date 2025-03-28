@@ -1,0 +1,31 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #60A5FA !important;
+  z-index: 0;
+}
+
+.swiper-pagination-bullet {
+  background: #60A5FA !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.swiper-pagination {
+  z-index: 0;
+}
