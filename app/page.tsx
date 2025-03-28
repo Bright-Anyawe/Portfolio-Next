@@ -1,3 +1,4 @@
+"use client";
 import "./styles/home.css";
 import { PersonalImage } from "./components/PersonalImage";
 import DownloadButton from "./components/Button";
