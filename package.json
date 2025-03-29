@@ -2,6 +2,10 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+   "description": "Bridging the gap between design and functionality. I leverage my expertise in [mention your key technologies, e.g., React, Next.js, etc.] to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "next dev ",
     "build": "next build",
