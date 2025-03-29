@@ -97,7 +97,7 @@ const SideNav = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-[100] p-2 rounded-md bg-gray-800 text-white lg:hidden"
+        className="fixed top-4 left-4 z-[9999] p-2 rounded-md bg-gray-800 text-white lg:hidden"
       >
         <svg
           className="w-6 h-6"
@@ -131,7 +131,7 @@ const SideNav = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[90] lg:hidden"
+            className="fixed inset-0 z-[9998] lg:hidden"
           >
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
