@@ -9,7 +9,24 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anyawe Bright",
-  description: "Portfolio",
+  description: "Bridging the gap between design and functionality. I leverage my expertise in React, Next.js, and Tailwind CSS to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
+  keywords: ["frontend developer", "react developer", "nextjs", "web development", "portfolio", "ui/ux", "web design", "javascript", "typescript", "Writer", "Advertiser", "Designer", "Developer", "Blogger", "Freelancer", "Anyawe Bright"],
+  openGraph: {
+    title: "Anyawe Bright | Frontend Developer Portfolio",
+    description: "Bridging the gap between design and functionality. I leverage my expertise in React, Next.js, and Tailwind CSS to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
+    url: "https://anyawe-bright-portfolio.vercel.app/", 
+    images: "/assets/og-image.avif",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anyawe Bright | Frontend Developer Portfolio",
+    description: "Bridging the gap between design and functionality. I leverage my expertise in React, Next.js, and Tailwind CSS to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
+    images: "/assets/Anyawe Img.jpg", // Path to your Twitter image
+  },  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
