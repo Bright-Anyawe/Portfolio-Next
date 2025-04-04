@@ -62,6 +62,42 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           {}
+          
+
+          {}
+          <div className="w-full xl:w-[50%]">
+            <Swiper
+              modules={[Navigation, Pagination]}
+              navigation
+              pagination
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              // Optional: Add responsive breakpoints
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 1 },
+              }}
+            >
+              {projects.map((project, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative group bg-pink-50/20 aspect-video">
+                    <div className="absolute inset-0 bg-black/10 z-10"></div>
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={project.src}
+                        alt={project.alt}
+                        fill
+                        style={{ objectFit: "contain" }}
+                        quality={100}
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
           <div className="w-full xl:w-[50%] xl:h-[40px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="projectCount text-8xl leading-none font-extrabold text-red-500 text-outline">
@@ -131,40 +167,6 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
-
-          {}
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              navigation
-              pagination
-              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-              // Optional: Add responsive breakpoints
-              breakpoints={{
-                640: { slidesPerView: 1 },
-                1024: { slidesPerView: 1 },
-              }}
-            >
-              {projects.map((project, index) => (
-                <SwiperSlide key={index}>
-                  <div className="relative group bg-pink-50/20 aspect-video">
-                    <div className="absolute inset-0 bg-black/10 z-10"></div>
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={project.src}
-                        alt={project.alt}
-                        fill
-                        style={{ objectFit: "contain" }}
-                        quality={100}
-                        priority
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
           </div>
 
           <style>

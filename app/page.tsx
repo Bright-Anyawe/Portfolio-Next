@@ -17,13 +17,18 @@ export default function Home() {
       <WelcomePopup />
       <section className="flex flex-col items-center xl:items-start xl:flex-row gap-8 p-6 xl:p-12 max-w-screen-2xl mx-auto">
         <div className="text-center xl:text-left order-2 xl:order-none">
-          <TypewriterComponent />
           <h1 className="devTextEl h1 mb-6 text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl font-medium leading-tight">
             Hello I am <br />
             <div className="home-name text-accent text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-gradient font-extrabold tracking-wide uppercase">
               Anyawe Bright
             </div>
           </h1>
+          <TypewriterComponent />
+
+          <div className="md:hidden my-4">
+            <PersonalImage />
+          </div>
+          
 
           <h2 className="text-red-500 text-xl xl:text-2xl 2xl:text-3xl">
             I EMBRACE THE DIGITAL WORLD
@@ -42,8 +47,12 @@ export default function Home() {
           <DownloadButton />
         </div>
 
-        <PersonalImage />
-      </section>
+          {/* Desktop version: visible on md and up */}
+       <div className="hidden md:block">
+          <PersonalImage />
+        </div>
+          
+                </section>
 
       <section className="py-12 xl:py-0">
         <div className="container mx-auto max-w-screen-2xl">

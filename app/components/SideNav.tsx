@@ -93,11 +93,11 @@ const SideNav = () => {
   };
 
   return (
-    <>
+    <div className="fixed inset-0 pointer-events-none z-[9999]">
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-[9999] p-2 rounded-md bg-gray-800 text-white lg:hidden"
+        className="fixed top-4 left-4 z-[9999] p-2 rounded-md bg-gray-800 text-white lg:hidden pointer-events-auto"
       >
         <svg
           className="w-6 h-6"
@@ -131,7 +131,7 @@ const SideNav = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[9998] lg:hidden"
+            className="fixed inset-0 z-[9998] lg:hidden pointer-events-auto"
           >
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm" 
@@ -161,7 +161,7 @@ const SideNav = () => {
       </AnimatePresence>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex flex-col space-y-4 fixed left-8 top-1/2 -translate-y-1/2 z-30">
+      <nav className="hidden lg:flex flex-col space-y-4 fixed left-8 top-1/2 -translate-y-1/2 z-[9999] pointer-events-auto">
         {navItems.map((item) => (
           <Link
             key={item.title}
@@ -177,7 +177,7 @@ const SideNav = () => {
           </Link>
         ))}
       </nav>
-    </>
+    </div>
   );
 };
 

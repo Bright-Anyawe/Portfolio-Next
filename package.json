@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-   "description": "Bridging the gap between design and functionality. I leverage my expertise in [mention your key technologies, e.g., React, Next.js, etc.] to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
+  "description": "Bridging the gap between design and functionality. I leverage my expertise in [mention your key technologies, e.g., React, Next.js, etc.] to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
   "engines": {
     "node": "18.x"
   },
@@ -15,10 +15,11 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.0.6",
+    "framer-motion": "^12.6.3",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
     "react-simple-typewriter": "^5.0.1",
     "swiper": "^11.2.1",
     "typeit-react": "^2.7.8"
