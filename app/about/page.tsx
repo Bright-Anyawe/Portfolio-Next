@@ -6,7 +6,6 @@ import { PersonalImage } from "@/app/components/PersonalImage";
 import "@/app/styles/about.css"; // Keep your custom styles if needed
 import TypewriterComponent from "@/app/components/TypeWriter"; // Assuming this is your typewriter
 
-// Import icons (choose appropriate icons)
 import {
   FaGraduationCap,
   FaBriefcase,
@@ -15,7 +14,6 @@ import {
   FaUserCheck,
 } from "react-icons/fa";
 
-// --- Data (Replace with your actual details) ---
 const educationData = [
   {
     institution: "High School Graduate",
@@ -67,9 +65,7 @@ const experienceData = [
   },
 ];
 
-// --- Component ---
 export default function About() {
-  // State to manage the active tab
   const [activeTab, setActiveTab] = useState<
     "about" | "education" | "experience" | "security"
   >("about");
@@ -82,7 +78,6 @@ export default function About() {
   const listItemVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
-      // Custom function for staggered effect
       opacity: 1,
       x: 0,
       transition: {
@@ -93,25 +88,22 @@ export default function About() {
   };
 
   return (
-    <section className="container mx-auto h-full py-12 xl:py-24 px-4">
+    <section className="container mx-auto h-full py-12 xl:py-24 px-4  overflow-x-hidden">
       {" "}
       {/* Added horizontal padding */}
-      <div className="flex flex-col xl:flex-row items-start justify-between gap-12">
-        {/* Image Section (Consider different positioning/styling) */}
-        {/* Option 1: Keep as is */}
-        {/* <div className="hidden md:block xl:order-last self-center xl:self-start"> */}
-        {/* Option 2: Make it sticky or integrate differently */}
+      <div className="flex flex-col xl:flex-row items-start justify-between gap-6">
+      
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="w-full max-w-[300px] sm:max-w-[350px] mx-auto xl:mx-0 xl:order-last mb-8 xl:mb-0 sticky top-24 self-center xl:self-start" // Make sticky on larger screens
+          className="w-full max-w-[300px] sm:max-w-[350px] mx-auto xl:mx-0 xl:order-last mb-8 xl:mb-0  top-24 self-center xl:self-start" 
         >
           <PersonalImage />
         </motion.div>
 
         {/* Text & Tabs Section */}
-        <div className="flex-1 text-center xl:text-left order-1 xl:order-none max-w-3xl">
+        <div className="flex-1 text-center xl:text-left order-1 xl:order-none max-w-2xl">
           {" "}
           {/* Increased max-width */}
           {/* Title */}
@@ -162,7 +154,7 @@ export default function About() {
             />
           </motion.div>
           {/* Tab Content */}
-          <div className="min-h-[400px]">
+          <div className="min-h-[400px] mb-8">
             {" "}
             {/* Set min-height to prevent layout jumps */}
             {/* --- About Me Content --- */}
