@@ -27,11 +27,10 @@ const educationData = [
   {
     institution: "Online Course Platform-The Odin Project",
     degree: "Advanced Frontend Development",
-    years: "2023",
+    years: "2023-present",
     description:
       "Acquired Knowledge and Skill in Javascript, React, Next.js, state management, and modern CSS frameworks like Tailwind.",
   },
-  // Add more education items if needed
 ];
 
 const experienceData = [
@@ -300,7 +299,7 @@ export default function About() {
                   Creating secure web applications is paramount. While the
                   threat landscape constantly evolves, I am committed to
                   implementing robust security measures throughout the
-                  development lifecycle. Here's how I approach it:
+                  development lifecycle. Here&apos;s how I approach it:
                 </p>
                 <motion.ul className="space-y-4 pl-4">
                   {[
