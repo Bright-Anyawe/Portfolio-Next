@@ -48,37 +48,37 @@ export default function Contact() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="min-h-screen flex items-center justify-center p-4"
+        className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8"
       >
         <div className="max-w-4xl w-full mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
-            <h1 className="text-4xl font-bold text-blue-300 mb-4">Contact Me</h1>
-            <p className="text-gray-300 text-lg">
+            <h1 className="text-3xl sm:text-4xl font-bold text-blue-300 mb-3 sm:mb-4">Contact Me</h1>
+            <p className="text-gray-300 text-base sm:text-lg">
               You might want to develop a website, application or discuss anything
               related. Take a break to leave a message below.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-gray-800/50 p-8 rounded-lg"
+              className="bg-gray-800/50 p-6 sm:p-8 rounded-lg"
             >
-              <h2 className="text-2xl font-semibold mb-6 text-blue-300">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-blue-300">
                 Get in Touch
               </h2>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-blue-300"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -92,14 +92,14 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-gray-200">Email</h3>
-                    <p className="text-gray-400">brightanyawe55@gmail.com</p>
+                    <h3 className="text-base sm:text-lg font-medium text-gray-200">Email</h3>
+                    <p className="text-sm sm:text-base text-gray-400">brightanyawe55@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
                     <svg
-                      className="w-6 h-6 text-blue-300"
+                      className="w-5 h-5 sm:w-6 sm:h-6 text-blue-300"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -119,10 +119,10 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-lg font-medium text-gray-200">
+                    <h3 className="text-base sm:text-lg font-medium text-gray-200">
                       Location
                     </h3>
-                    <p className="text-gray-400">
+                    <p className="text-sm sm:text-base text-gray-400">
                       Tema, Golf City, Africa( Ghana){" "}
                     </p>
                   </div>
@@ -136,18 +136,18 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
               onSubmit={handleSubmit}
-              className="bg-gray-800/50 p-8 rounded-lg"
+              className="bg-gray-800/50 p-6 sm:p-8 rounded-lg"
             >
               <input
                 type="hidden"
                 name="access_key"
                 value="ec323071-c9a1-48e4-9bba-87c32ecc2b27"
               />
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2"
                   >
                     Name
                   </label>
@@ -156,14 +156,14 @@ export default function Contact() {
                     id="name"
                     name="Name"
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2"
                   >
                     Email
                   </label>
@@ -172,14 +172,14 @@ export default function Contact() {
                     id="email"
                     name="Email"
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="your@email.com"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="subject"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2"
                   >
                     Subject
                   </label>
@@ -188,14 +188,14 @@ export default function Contact() {
                     id="subject"
                     name="Subject"
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="Enter message subject"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2"
                   >
                     Message
                   </label>
@@ -204,14 +204,14 @@ export default function Contact() {
                     name="Message"
                     required
                     rows={4}
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none text-sm sm:text-base"
                     placeholder="Your message"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={formStatus === "sending" || formStatus === "success"}
-                  className={`w-full px-6 py-3 rounded-lg text-white font-medium flex items-center justify-center gap-2 transition-all ${
+                  className={`w-full px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-white font-medium flex items-center justify-center gap-2 transition-all text-sm sm:text-base ${
                     formStatus === "sending" || formStatus === "success"
                       ? "bg-blue-600 cursor-not-allowed"
                       : "bg-blue-500 hover:bg-blue-600"
