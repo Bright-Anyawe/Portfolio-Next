@@ -88,7 +88,7 @@ export default function About() {
   };
 
   return (
-    <section className="container mx-auto h-full py-12 xl:py-24 px-4  overflow-x-hidden">
+    <section className="container mx-auto h-full py-12 xl:py-24 px-4  ">
       {" "}
       {/* Added horizontal padding */}
       <div className="flex flex-col xl:flex-row items-start justify-between gap-6">

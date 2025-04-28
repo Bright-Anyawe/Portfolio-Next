@@ -20,6 +20,16 @@ const projects = [
       "Scalable React application with dynamic product pages, cart functionality, and authentication.",
   },
   {
+    src: "/assets/golf-estate-assembly.jpg",
+    live: "https://golf-estate-assembly.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/faith-hub-manager",
+    alt: "Golf Estate Assembly(Pentecostal Church)",
+    tools: `HTML 5, CSS3, React`,
+    title: "Golf Estate Assembly",
+    description:
+      "This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost",
+  },
+  {
     src: "/assets/Microscopic visioneer.webp",
     live: "https://wsi-viewer-2.vercel.app/",
     gitHubLink: "https://github.com/Bright-Anyawe/wsi-viewer",
@@ -29,8 +39,6 @@ const projects = [
     description:
       "This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.",
   },
- 
-
   {
     src: "/assets/image.png",
     alt: "Figma design",

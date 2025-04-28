@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Anyawe Bright | Frontend Developer Portfolio",
     description: "Bridging the gap between design and functionality. I leverage my expertise in React, Next.js, and Tailwind CSS to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
-    images: "/assets/Anyawe Img.jpg", // Path to your Twitter image
+    images: "/assets/Anyawe Img.jpg", 
   },  robots: {
     index: true,
     follow: true,
