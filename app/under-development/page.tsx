@@ -32,7 +32,7 @@ export default function UnderDevelopment() {
           </h2>
           
           <p className="text-gray-300 text-center mb-8">
-            This section is currently under development. We're working hard to bring you an amazing experience. Please check back soon!
+            This section is currently under development. We&apos;re working hard to bring you an amazing experience. Please check back soon!
           </p>
 
           <div className="flex flex-col space-y-4">

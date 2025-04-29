@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const config: NextConfig = {
-  output: 'standalone',
+  output: "standalone",
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
@@ -14,7 +14,9 @@ const config: NextConfig = {
     ],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {
+      allowedOrigins: ["localhost:3001", "localhost:3000"],
+    },
   },
 };
 
