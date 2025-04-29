@@ -14,7 +14,8 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/auth/signin",
+    signIn: "/under-development",
+    error: "/under-development",
   },
   callbacks: {
     async session({ session }) {
