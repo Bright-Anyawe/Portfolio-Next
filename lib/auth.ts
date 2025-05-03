@@ -4,18 +4,24 @@ import GoogleProvider from "next-auth/providers/google"
 
 export const authOptions: NextAuthOptions = {
   providers: [
-    GithubProvider({
-      clientId: process.env.GITHUB_ID as string,
-      clientSecret: process.env.GITHUB_SECRET as string,
-    }),
+    
     GoogleProvider({
       clientId: process.env.GOOGLE_ID as string,
       clientSecret: process.env.GOOGLE_SECRET as string,
-    }),
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
+        }
+    }}),
+    
   ],
   pages: {
-    signIn: "/under-development",
-    error: "/under-development",
+    pages: {
+      signIn: "/signin", 
+      error: "/error", // Optional: Create an error page
+    },
   },
   callbacks: {
     async session({ session }) {
@@ -24,5 +30,11 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token }) {
       return token
     },
+    async redirect({ url, baseUrl }) {
+      // Ensure redirect after sign-in goes to the correct URL
+      return url.startsWith("/") ? `${baseUrl}${url}` : url;
+    },
   },
+  secret: process.env.NEXTAUTH_SECRET,
+
 } 
