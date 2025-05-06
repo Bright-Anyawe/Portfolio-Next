@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+=======
+import { NextAuthOptions } from "next-auth"
+import GoogleProvider from "next-auth/providers/google"
+>>>>>>> 723f85f4ebd5bb12c1aae736ac92bf584490bb2b
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -34,4 +39,9 @@ export const authOptions: NextAuthOptions = {
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
+<<<<<<< HEAD
 };
+=======
+
+} 
+>>>>>>> 723f85f4ebd5bb12c1aae736ac92bf584490bb2b
