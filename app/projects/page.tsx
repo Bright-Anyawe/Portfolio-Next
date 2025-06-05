@@ -9,6 +9,16 @@ import { Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
 
 const projects = [
+   {
+    src: "/assets/EHR.jpg",
+    live: "https://akorabo-l-6kmyiauh6-bright-anyawes-projects.vercel.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Akorabo-L.EHR",
+    alt: "Electronic Health Record (EHR) system",
+    tools: `HTML 5, Tailwind(CSS3), React(Next.js)`,
+    title: " Electronic Health Record (EHR) system",
+    description:
+      "Developed a lightweight Electronic Health Record (EHR) system for a clinic, designed to streamline the management of patient data. The application allows staff to securely create, update, and retrieve patient records, ensuring data privacy and integrity.",
+  },
   {
     src: "/assets/e-commerce-platform-landing-page.avif",
     live: "https://tech-spark-phi.vercel.app/",

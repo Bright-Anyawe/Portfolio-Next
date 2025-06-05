@@ -7,7 +7,7 @@ import WelcomePopup from "./components/WelcomePopup";
 
 export default function Home() {
   const stats = [
-    { value: "25", label: "Months of experience" },
+    { value: "28", label: "Months of experience" },
     { value: "6", label: "Projects completed" },
     { value: "1", label: "Language Learnt" },
   ];
