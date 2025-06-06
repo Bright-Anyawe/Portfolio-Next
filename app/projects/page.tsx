@@ -1,86 +1,86 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { useState } from "react";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import { useState } from 'react';
 
 const projects = [
-   {
-    src: "/assets/EHR.jpg",
-    live: "https://akorabo-l-6kmyiauh6-bright-anyawes-projects.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Akorabo-L.EHR",
-    alt: "Electronic Health Record (EHR) system",
+  {
+    src: '/assets/EHR.jpg',
+    live: 'https://akorabo-l-6kmyiauh6-bright-anyawes-projects.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/Akorabo-L.EHR',
+    alt: 'Electronic Health Record (EHR) system',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js)`,
-    title: " Electronic Health Record (EHR) system",
+    title: ' Electronic Health Record (EHR) system',
     description:
-      "Developed a lightweight Electronic Health Record (EHR) system for a clinic, designed to streamline the management of patient data. The application allows staff to securely create, update, and retrieve patient records, ensuring data privacy and integrity.",
-  },
-  {
-    src: "/assets/e-commerce-platform-landing-page.avif",
-    live: "https://tech-spark-phi.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/trendy-cart-spark",
-    alt: "E-commerce website",
-    tools: `HTML 5, CSS3, React`,
-    title: "E-commerce Store",
-    description:
-      "Scalable React application with dynamic product pages, cart functionality, and authentication.",
-  },
-  {
-    src: "/assets/not-authorized.png",
-    live: "https://inde-book.vercel.app/",
-    gitHubLink: "https://inde-book.vercel.app/",
-    alt: "E-books",
-    tools: `HTML 5, CSS3, React, Nextjs`,
-    title: "E-Books Website(IndE-books)",
-    description:
-      "An Internship project designed to showcase my skills in web development during my internship with UPG company on E-book project which allow publishers to publish their book",
+      'Developed a lightweight Electronic Health Record (EHR) system for a clinic, designed to streamline the management of patient data. The application allows staff to securely create, update, and retrieve patient records, ensuring data privacy and integrity.',
   },
    {
-    src: "/assets/image.png",
-    alt: "Figma design",
-    live: "https://phinance-management-app.netlify.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
-    tools: `HTML 5, CSS3`,
-    title: "Figma Design Website",
+    src: '/assets/not-authorized.png',
+    live: 'https://inde-book.vercel.app/',
+    gitHubLink: 'https://inde-book.vercel.app/',
+    alt: 'E-books',
+    tools: `HTML 5, CSS3, React, Nextjs`,
+    title: 'E-Books Website(IndE-books)',
     description:
-      "This project is a figma design website that was designed for Yottanet company clients",
+      'As a Frontend Intern at University of Phoenix Group (UPG), I contributed to developing an E-book website. I implemented an AI-powered chatbot to enhance user engagement with real-time feedback and designed a responsive carousel to improve interface interaction',
   },
   {
-    src: "/assets/golf-estate-assembly.jpg",
-    live: "https://golf-estate-assembly.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/faith-hub-manager",
-    alt: "Golf Estate Assembly(Pentecostal Church)",
+    src: '/assets/e-commerce-platform-landing-page.avif',
+    live: 'https://tech-spark-phi.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/trendy-cart-spark',
+    alt: 'E-commerce website',
     tools: `HTML 5, CSS3, React`,
-    title: "Golf Estate Assembly",
+    title: 'E-commerce Store',
     description:
-      "This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost",
+      'Scalable React application with dynamic product pages, cart functionality, and authentication.',
+  },
+ 
+  {
+    src: '/assets/image.png',
+    alt: 'Figma design',
+    live: 'https://phinance-management-app.netlify.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/Figma_design',
+    tools: `HTML 5, CSS3`,
+    title: 'Figma Design Website',
+    description:
+      'This project is a figma design website that was designed for Yottanet company clients',
   },
   {
-    src: "/assets/Microscopic visioneer.webp",
-    live: "https://wsi-viewer-2.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/wsi-viewer",
-    alt: "Whole Slide Image",
+    src: '/assets/golf-estate-assembly.jpg',
+    live: 'https://golf-estate-assembly.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/faith-hub-manager',
+    alt: 'Golf Estate Assembly(Pentecostal Church)',
+    tools: `HTML 5, CSS3, React`,
+    title: 'Golf Estate Assembly',
+    description:
+      'This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost',
+  },
+  {
+    src: '/assets/Microscopic visioneer.webp',
+    live: 'https://wsi-viewer-2.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/wsi-viewer',
+    alt: 'Whole Slide Image',
     tools: `HTML 5, CSS3,  React[Nextjs]`,
-    title: "Whole Slide Image Viewer",
+    title: 'Whole Slide Image Viewer',
     description:
-      "This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.",
+      'This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.',
   },
- 
+
   {
-    src: "/assets/fruits.jpeg",
-    live: "https://fruit-lelo.vercel.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Fruit-lelo",
-    alt: "Skill Test dashboard",
+    src: '/assets/fruits.jpeg',
+    live: 'https://fruit-lelo.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/Fruit-lelo',
+    alt: 'Skill Test dashboard',
     tools: `HTML 5, CSS3,  React`,
-    title: "A fruit-lelo website",
+    title: 'A fruit-lelo website',
     description:
-      "This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React",
+      'This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React',
   },
- 
 ];
 
 const Projects = () => {
@@ -91,7 +91,6 @@ const Projects = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           {}
-          
 
           {}
           <div className="w-full xl:w-[50%]">
@@ -99,7 +98,7 @@ const Projects = () => {
               modules={[Navigation, Pagination]}
               navigation
               pagination
-              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+              onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
               // Optional: Add responsive breakpoints
               breakpoints={{
                 640: { slidesPerView: 1 },
@@ -115,7 +114,7 @@ const Projects = () => {
                         src={project.src}
                         alt={project.alt}
                         fill
-                        style={{ objectFit: "contain" }}
+                        style={{ objectFit: 'contain' }}
                         quality={100}
                         priority
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -130,19 +129,15 @@ const Projects = () => {
           <div className="w-full xl:w-[50%] xl:h-[40px] flex flex-col xl:justify-between order-2 xl:order-none">
             <div className="flex flex-col gap-[30px] h-[50%]">
               <div className="projectCount text-8xl leading-none font-extrabold text-red-500 text-outline">
-                {String(activeIndex + 1).padStart(2, "0")}
+                {String(activeIndex + 1).padStart(2, '0')}
               </div>
 
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {projects[activeIndex].title}
               </h2>
-              <p className="description text-white/60">
-                {projects[activeIndex].description}
-              </p>
+              <p className="description text-white/60">{projects[activeIndex].description}</p>
               <ul className="flex gap-4 text-red-500">
-                <li className="text-xl text-accent">
-                  {projects[activeIndex].tools},
-                </li>
+                <li className="text-xl text-accent">{projects[activeIndex].tools},</li>
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
