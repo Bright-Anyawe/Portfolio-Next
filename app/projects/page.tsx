@@ -39,6 +39,16 @@ const projects = [
     description:
       "An Internship project designed to showcase my skills in web development during my internship with UPG company on E-book project which allow publishers to publish their book",
   },
+   {
+    src: "/assets/image.png",
+    alt: "Figma design",
+    live: "https://phinance-management-app.netlify.app/",
+    gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
+    tools: `HTML 5, CSS3`,
+    title: "Figma Design Website",
+    description:
+      "This project is a figma design website that was designed for Yottanet company clients",
+  },
   {
     src: "/assets/golf-estate-assembly.jpg",
     live: "https://golf-estate-assembly.vercel.app/",
@@ -59,16 +69,7 @@ const projects = [
     description:
       "This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.",
   },
-  {
-    src: "/assets/image.png",
-    alt: "Figma design",
-    live: "https://phinance-management-app.netlify.app/",
-    gitHubLink: "https://github.com/Bright-Anyawe/Figma_design",
-    tools: `HTML 5, CSS3`,
-    title: "Figma Design Website",
-    description:
-      "This project is a figma design website that was designed for Yottanet company clients",
-  },
+ 
   {
     src: "/assets/fruits.jpeg",
     live: "https://fruit-lelo.vercel.app/",
