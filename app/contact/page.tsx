@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import SuccessNotification from "../components/SuccessNotification";
+import Script from "next/script";
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -23,12 +24,10 @@ export default function Contact() {
         setFormStatus("success");
         setShowNotification(true);
         
-        // Reset form using ref
         if (formRef.current) {
           formRef.current.reset();
         }
         
-        // Reset states after 5 seconds
         setTimeout(() => {
           setFormStatus("idle");
           setShowNotification(false);
@@ -44,6 +43,20 @@ export default function Contact() {
 
   return (
     <>
+      <Script
+        id="contact-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Anyawe Bright - Frontend Developer",
+            "description": "Get in touch with Anyawe Bright for professional frontend development services in Tema and Golf City.",
+            "url": "https://anyawe-bright-portfolio.vercel.app/contact"
+          })
+        }}
+      />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -59,8 +72,7 @@ export default function Contact() {
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-blue-300 mb-3 sm:mb-4">Contact Me</h1>
             <p className="text-gray-300 text-base sm:text-lg">
-              You might want to develop a website, application or discuss anything
-              related. Take a break to leave a message below.
+              Looking for web development services in Tema or Golf City? Let's discuss your project.
             </p>
           </motion.div>
 
@@ -123,9 +135,25 @@ export default function Contact() {
                       Location
                     </h3>
                     <p className="text-sm sm:text-base text-gray-400">
-                      Tema, Golf City, Africa( Ghana){" "}
+                      Tema, Golf City, Ghana
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-lg font-medium text-blue-300 mb-4">Find Me Here</h3>
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.973444!2d-0.0170!3d5.6037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sGolf%20City%2C%20Tema!5e0!3m2!1sen!2sgh!4v1635000000000!5m2!1sen!2sgh"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Golf City, Tema Location"
+                  ></iframe>
                 </div>
               </div>
             </motion.div>
@@ -175,6 +203,25 @@ export default function Contact() {
                     className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-sm sm:text-base"
                     placeholder="your@email.com"
                   />
+                </div>
+                <div>
+                  <label
+                    htmlFor="location"
+                    className="block text-sm font-medium text-gray-300 mb-1 sm:mb-2"
+                  >
+                    Your Location
+                  </label>
+                  <select
+                    id="location"
+                    name="Location"
+                    required
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors text-sm sm:text-base"
+                  >
+                    <option value="">Select your location</option>
+                    <option value="Tema">Tema</option>
+                    <option value="Golf City">Golf City</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
                 <div>
                   <label
@@ -255,22 +302,7 @@ export default function Contact() {
                       Message Sent!
                     </>
                   ) : (
-                    <>
-                      Send Message
-                      <svg
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M14 5l7 7m0 0l-7 7m7-7H3"
-                        />
-                      </svg>
-                    </>
+                    "Send Message"
                   )}
                 </button>
               </div>
@@ -278,13 +310,7 @@ export default function Contact() {
           </div>
         </div>
       </motion.div>
-      <SuccessNotification 
-        isVisible={showNotification} 
-        onClose={() => {
-          setShowNotification(false);
-          setFormStatus("idle");
-        }} 
-      />
+      {showNotification && <SuccessNotification />}
     </>
   );
 }
