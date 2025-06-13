@@ -310,7 +310,12 @@ export default function Contact() {
           </div>
         </div>
       </motion.div>
-      {showNotification && <SuccessNotification />}
+      {showNotification && (
+        <SuccessNotification 
+          isVisible={showNotification} 
+          onClose={() => setShowNotification(false)} 
+        />
+      )}
     </>
   );
 }
