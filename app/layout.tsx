@@ -7,8 +7,10 @@ import Providers from "./components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anyawe-bright-portfolio.vercel.app"),
+  metadataBase: new URL(baseUrl),
   title: "Anyawe Bright | Top Frontend Developer in Tema & Golf City",
   description: "Leading frontend developer in Tema and Golf City, specializing in React, Next.js, and modern web development. Expert in creating responsive, accessible, and high-performance web applications. Available for local and remote projects.",
   keywords: [

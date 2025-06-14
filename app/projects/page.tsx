@@ -140,7 +140,8 @@ const Projects = () => {
                 <li className="text-xl text-accent">{projects[activeIndex].tools},</li>
               </ul>
               <div className="border border-white/20"></div>
-              <div className="flex items-center gap-4">
+              <div className="flex items-ce
+              nter gap-4">
                 {}
                 <a target="_blank" href={`${projects[activeIndex].live}`}>
                   <button className="relative w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 hover:bg-accent">

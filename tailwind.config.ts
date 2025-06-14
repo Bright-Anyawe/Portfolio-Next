@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +9,7 @@ export default {
   ],
   theme: {
     extend: {
-       animation: {
+      animation: {
         'spin-slow': 'spin 10s linear infinite',
       },
       colors: {
@@ -19,4 +19,9 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
+};
+
+export default config;
