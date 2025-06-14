@@ -16,6 +16,22 @@ const config = {
       allowedOrigins: ["localhost:3001", "localhost:3000"],
     },
   },
+  optimizeFonts: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups.styles = {
+        name: 'styles',
+        test: /\.(css|scss)$/,
+        chunks: 'all',
+        enforce: true,
+      };
+    }
+    return config;
+  },
 };
 
 module.exports = config; 
