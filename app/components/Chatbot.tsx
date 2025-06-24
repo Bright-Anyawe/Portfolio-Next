@@ -162,11 +162,11 @@ export default function Chatbot() {
             )}
             {/* Quick Replies */}
             {name && (
-              <div className="flex flex-wrap gap-2 px-4 py-2 border-t border-gray-700 bg-gray-950">
+              <div className="flex overflow-x-auto gap-2 px-4 py-2 border-t border-gray-700 bg-gray-950 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 {QUICK_REPLIES.map((q) => (
                   <button
                     key={q}
-                    className="bg-accent/20 text-accent px-3 py-1 rounded-full text-xs hover:bg-accent/40 transition"
+                    className="flex-shrink-0 bg-accent/20 text-accent px-3 py-1 rounded-full text-xs hover:bg-accent/40 transition whitespace-nowrap"
                     onClick={() => sendMessage(q)}
                     disabled={loading}
                   >

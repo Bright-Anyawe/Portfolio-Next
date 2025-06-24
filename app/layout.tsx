@@ -5,6 +5,7 @@ import SideNav from "./components/SideNav";
 import PageTransition from "./components/PageTransition";
 import Providers from "./components/Providers";
 import Chatbot from "./components/Chatbot";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -81,6 +82,7 @@ export default function RootLayout({
                 {children}
                 {/* Chatbot floating widget */}
                 <Chatbot />
+                <WhatsAppButton />
               </div>
             </div>
           </PageTransition>
