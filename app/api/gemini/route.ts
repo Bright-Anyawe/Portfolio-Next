@@ -40,7 +40,7 @@ function searchPortfolio(data: any, query: string): string {
 }
 
 export async function POST(req: NextRequest) {
-  const { message } = await req.json();
+  const { message, history } = await req.json();
   const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ reply: "Error: Gemini API key is missing." }, { status: 500 });
@@ -58,7 +58,11 @@ export async function POST(req: NextRequest) {
 
   // RAG: Find relevant context
   const context = searchPortfolio(portfolioData, message);
-  const prompt = `You are a portfolio assistant for Anyawe Bright. Use the following context to answer the user's question.\nContext:\n${context}\nUser: ${message}`;
+  let conversation = "";
+  if (Array.isArray(history) && history.length > 0) {
+    conversation = history.map((h: any) => `${h.role === "user" ? "User" : "Bot"}: ${h.text}`).join("\n");
+  }
+  const prompt = `You are a portfolio assistant for Anyawe Bright. Use the following context to answer the user's question.\nContext:\n${context}\n${conversation}\nUser: ${message}`;
 
   // Use Gemini 2.0 Flash model and v1beta endpoint
   try {
