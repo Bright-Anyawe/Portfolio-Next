@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['next/core-web-vitals', 'prettier'],
+  extends: ['next/core-web-vitals'],
   plugins: ['@typescript-eslint'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
@@ -12,4 +12,4 @@ module.exports = {
       rootDir: ['./'],
     },
   },
-}; 
+};

@@ -25,20 +25,6 @@ const config: Config = {
   corePlugins: {
     preflight: true,
   },
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './app/**/*.{js,ts,jsx,tsx,mdx}',
-      './components/**/*.{js,ts,jsx,tsx,mdx}',
-      './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    ],
-    safelist: [
-      'bg-gray-900',
-      'text-white',
-      'bg-white',
-      'text-black',
-    ],
-  },
 };
 
 export default config;
