@@ -7,7 +7,7 @@ export default function DownloadButton() {
       <div className="flex flex-col xl:flex-row items-center gap-12">
         {}
         <a
-          href="./Resume.v2.2.docx.pdf"
+          href="./Resume.v2.4.docx.pdf"
           download
           className="sheen-button justify-center whitespace-nowrap rounded-full font-semibold ring-offset-white transition-colors bg-transparent text-accent border border-accent hover:bg-accent-hover h-[56px] px-8 text-sm tracking-[2px] uppercase flex items-center gap-2"
         >
