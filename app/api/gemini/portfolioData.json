@@ -1,0 +1,54 @@
+{
+  "about": "Anyawe Bright is a passionate front-end developer, blog writer, graphic designer, and more incline in backend with  SQL, PostgreSQL, Prisma ORM based in Ghana, dedicated to continuously improving skills through study and practical application. Loves solving real-world problems with code.",
+  "education": [
+    {
+      "institution": "High School Graduate",
+      "degree": "Expert in IT",
+      "years": "2021 - 2023",
+      "description": "Focused on Network, Security, Excel, database principles, algorithms, and data structures. Completed a final year project on CSS and HTML Landing page."
+    },
+    {
+      "institution": "Online Course Platform-The Odin Project",
+      "degree": "Advanced Frontend Development",
+      "years": "2023-present",
+      "description": "Acquired knowledge and skill in Javascript, React, Next.js, state management, and modern CSS frameworks like Tailwind."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Yottanet Technologies",
+      "role": "Frontend Freelancer",
+      "years": "June, 2023 - October, 2023",
+      "description": [
+        "Developed and transformed Figma designs into responsive and functional user interfaces using React, Tailwind, and CSS3.",
+        "Integrated third-party APIs and managed application state effectively.",
+        "Built projects like Todo List apps, Website builder, E-commerce sites, and CV Builders."
+      ]
+    },
+    {
+      "company": "Internship For Universal Phoenix Group(UPG)",
+      "role": "Frontend Developer",
+      "years": "March, 2024 - May, 2024",
+      "description": [
+        "Improved old toast component into modern responsive and animated notification.",
+        "Implemented a function that allows users to update the Roadmap and reflect in real-time."
+      ]
+    },
+    {
+      "company": "Personal Projects",
+      "role": "Developer",
+      "years": "Ongoing",
+      "description": [
+        "Continuously building projects to explore new technologies and refine skills.",
+        "Built projects like Todo List apps, Church Website, Website builder prototype, E-commerce sites, and CV Builder."
+      ]
+    }
+  ],
+  "projects": [
+    "Todo List apps",
+    "Church Website",
+    "Website builder prototype",
+    "E-commerce sites",
+    "CV Builder"
+  ]
+}

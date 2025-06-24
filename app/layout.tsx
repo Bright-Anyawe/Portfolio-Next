@@ -4,6 +4,7 @@ import "./globals.css";
 import SideNav from "./components/SideNav";
 import PageTransition from "./components/PageTransition";
 import Providers from "./components/Providers";
+import Chatbot from "./components/Chatbot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,6 +79,8 @@ export default function RootLayout({
               </div>
               <div className="flex-grow p-6 overflow-y-auto md:p-12 bg-gray-900">
                 {children}
+                {/* Chatbot floating widget */}
+                <Chatbot />
               </div>
             </div>
           </PageTransition>
