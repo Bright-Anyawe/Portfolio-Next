@@ -25,26 +25,48 @@ function getLocalPosts() {
 }
 
 async function getMediumPosts() {
-  const parser = new Parser();
-  const feed = await parser.parseURL('https://medium.com/feed/@brightanyawe5');
-  return feed.items.map((item) => ({
-    slug: item.guid || item.link,
-    title: item.title || '',
-    date: item.pubDate || '',
-    description: item.contentSnippet || '',
-    link: item.link,
-    source: 'medium',
-  }));
+  try {
+    const parser = new Parser();
+    const feed = await parser.parseURL('https://medium.com/feed/@brightanyawe5');
+    return { posts: feed.items.map((item) => ({
+      slug: item.guid || item.link,
+      title: item.title || '',
+      date: item.pubDate || '',
+      description: item.contentSnippet || '',
+      link: item.link,
+      source: 'medium',
+    })), error: false };
+  } catch (error) {
+    // If Medium API fails (rate limit, etc), return empty array and log error
+    console.error('Failed to fetch Medium posts:', error);
+    return { posts: [], error: true };
+  }
 }
 
 export default async function BlogPage() {
   const localPosts = getLocalPosts();
-  const mediumPosts = await getMediumPosts();
+  const mediumResult = await getMediumPosts();
+  const mediumPosts = mediumResult.posts;
   const allPosts = [...localPosts, ...mediumPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <main className="max-w-3xl mx-auto py-10 px-4 bg-white dark:bg-gray-900 min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white">Blog</h1>
+      {mediumResult.error && (
+        <div className="mb-6 p-4 rounded bg-yellow-100 border border-yellow-300 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 dark:border-yellow-700 flex items-center justify-between">
+          <span>
+            Unable to load Medium posts right now. You can still read my articles on{' '}
+            <a
+              href="https://medium.com/@brightanyawe5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-semibold text-blue-700 dark:text-blue-300"
+            >
+              Medium
+            </a>.
+          </span>
+        </div>
+      )}
       <div className="grid gap-6">
         {allPosts.map((post) => (
           <div key={post.slug} className="rounded-lg border border-gray-200 bg-white dark:bg-gray-800 shadow p-6 hover:shadow-lg transition">
@@ -65,4 +87,4 @@ export default async function BlogPage() {
       </div>
     </main>
   );
-} 
+}
