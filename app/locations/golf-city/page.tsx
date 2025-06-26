@@ -68,7 +68,7 @@ export default function GolfCityPage() {
             <div>
               <h3 className="text-xl font-medium text-blue-300 mb-2">Community Focus</h3>
               <p className="text-gray-300">
-                Understanding of Golf City's business community and needs
+                Understanding of Golf City&apos;s business community and needs
               </p>
             </div>
             <div>
@@ -109,4 +109,4 @@ export default function GolfCityPage() {
       </motion.div>
     </>
   );
-} 
+}

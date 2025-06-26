@@ -72,7 +72,7 @@ export default function Contact() {
           >
             <h1 className="text-3xl sm:text-4xl font-bold text-blue-300 mb-3 sm:mb-4">Contact Me</h1>
             <p className="text-gray-300 text-base sm:text-lg">
-              Looking for web development services in Tema or Golf City? Let's discuss your project.
+              Looking for web development services in Tema or Golf City? Let&apos;s discuss your project.
             </p>
           </motion.div>
 

@@ -82,7 +82,7 @@ export default function Chatbot() {
       } else {
         setError(data.reply || "Something went wrong.");
       }
-    } catch (err: any) {
+    } catch {
       setError("Network error. Please try again.");
     } finally {
       setLoading(false);

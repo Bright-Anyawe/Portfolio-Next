@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import Parser from 'rss-parser';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
