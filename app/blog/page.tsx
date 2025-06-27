@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Link from 'next/link';
 import Parser from 'rss-parser';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
@@ -36,9 +35,7 @@ async function getMediumPosts() {
       link: item.link,
       source: 'medium',
     })), error: false };
-  } catch (error) {
-    // If Medium API fails (rate limit, etc), return empty array and log error
-    console.error('Failed to fetch Medium posts:', error);
+  } catch {
     return { posts: [], error: true };
   }
 }

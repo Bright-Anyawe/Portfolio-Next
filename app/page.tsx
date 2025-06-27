@@ -112,7 +112,7 @@ export default function Home() {
             Leading Frontend Developer in Tema & Golf City
           </h2>
           <p className="IntroType max-w-[80vw] xl:max-w-[500px] 2xl:max-w-[600px] mb-9 text-white text-lg xl:text-xl 2xl:text-2xl leading-relaxed">
-            Looking for a skilled frontend developer in Tema or Golf City? I specialize in creating responsive, accessible, and high-performance web applications using React and Next.js. With expertise in modern web technologies and a focus on user experience, I help businesses and individuals establish a strong online presence. Whether you need a new website, web application, or improvements to your existing digital platform, I'm here to help. Based in Tema, I'm available for both local and remote projects.
+            Looking for a skilled frontend developer in Tema or Golf City? I specialize in creating responsive, accessible, and high-performance web applications using React and Next.js. With expertise in modern web technologies and a focus on user experience, I help businesses and individuals establish a strong online presence. Whether you need a new website, web application, or improvements to your existing digital platform, I&apos;m here to help. Based in Tema, I&apos;m available for both local and remote projects.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center xl:justify-start mb-6">

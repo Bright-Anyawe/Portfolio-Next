@@ -43,7 +43,7 @@ export default function Chatbot() {
         ]);
       }, 300);
     }
-  }, [open, name]);
+  }, [open, name, messages.length]);
 
   // Handle user input and conversation memory
   async function sendMessage(msg?: string) {
@@ -82,7 +82,7 @@ export default function Chatbot() {
       } else {
         setError(data.reply || "Something went wrong.");
       }
-    } catch (err: any) {
+    } catch {
       setError("Network error. Please try again.");
     } finally {
       setLoading(false);

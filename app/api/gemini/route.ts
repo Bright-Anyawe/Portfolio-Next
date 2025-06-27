@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
   try {
     const file = await fs.readFile(dataPath, "utf-8");
     portfolioData = JSON.parse(file);
-  } catch (err) {
+  } catch {
     return NextResponse.json({ reply: "Error loading portfolio data." }, { status: 500 });
   }
 
