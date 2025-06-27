@@ -35,7 +35,7 @@ async function getMediumPosts() {
       link: item.link,
       source: 'medium',
     })), error: false };
-  } catch (error) {
+  } catch {
     return { posts: [], error: true };
   }
 }
