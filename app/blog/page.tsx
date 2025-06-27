@@ -36,8 +36,6 @@ async function getMediumPosts() {
       source: 'medium',
     })), error: false };
   } catch (error) {
-    // If Medium API fails (rate limit, etc), return empty array and log error
-    console.error('Failed to fetch Medium posts:', error);
     return { posts: [], error: true };
   }
 }
