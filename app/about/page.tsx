@@ -97,7 +97,16 @@ export default function About() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="w-full max-w-[300px] sm:max-w-[350px] mx-auto xl:mx-0 xl:order-last mb-8 xl:mb-0  top-24 self-center xl:self-start" 
+          style={{
+            width: '100%',
+            maxWidth: '300px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            order: 2,
+            marginBottom: '2rem',
+            top: '6rem',
+            alignSelf: 'center',
+          }}
         >
           <PersonalImage />
         </motion.div>
@@ -294,30 +303,30 @@ export default function About() {
                   development lifecycle. Here&apos;s how I approach it:
                 </p>
                 <motion.ul className="space-y-4 pl-4">
-                  {[
+                  { [
                     {
                       icon: <FaLock className="text-accent" />,
-                      text: "**Secure Coding Practices:** Writing clean, validated code to prevent common vulnerabilities like Cross-Site Scripting (XSS) and SQL Injection (where applicable).",
+                      text: "Secure Coding Practices: Writing clean, validated code to prevent common vulnerabilities like Cross-Site Scripting (XSS) and SQL Injection (where applicable).",
                     },
                     {
                       icon: <FaUserCheck className="text-accent" />,
-                      text: "**Input Validation:** Rigorously validating and sanitizing all user inputs on both the client-side and server-side (when building full-stack apps) to prevent malicious data injection.",
+                      text: "Input Validation: Rigorously validating and sanitizing all user inputs on both the client-side and server-side (when building full-stack apps) to prevent malicious data injection.",
                     },
                     {
                       icon: <FaShieldAlt className="text-accent" />,
-                      text: "**Dependency Management:** Keeping libraries and frameworks up-to-date to patch known security vulnerabilities.",
+                      text: "Dependency Management: Keeping libraries and frameworks up-to-date to patch known security vulnerabilities.",
                     },
                     {
                       icon: <FaLock className="text-accent" />,
-                      text: "**HTTPS Enforcement:** Ensuring data transmission is encrypted using HTTPS.",
+                      text: "HTTPS Enforcement: Ensuring data transmission is encrypted using HTTPS.",
                     },
                     {
                       icon: <FaUserCheck className="text-accent" />,
-                      text: "**Authentication & Authorization:** Implementing secure methods for user login and ensuring users can only access appropriate resources (relevant for apps with user accounts).",
+                      text: "Authentication & Authorization: Implementing secure methods for user login and ensuring users can only access appropriate resources (relevant for apps with user accounts).",
                     },
                     {
                       icon: <FaShieldAlt className="text-accent" />,
-                      text: "**Staying Informed:** Continuously learning about new threats and security best practices to adapt my development approach.",
+                      text: "Staying Informed: Continuously learning about new threats and security best practices to adapt my development approach.",
                     },
                   ].map((item, index) => (
                     <motion.li

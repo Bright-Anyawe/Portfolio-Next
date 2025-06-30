@@ -9,11 +9,17 @@ const TypewriterComponent = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative"
+      style={{ position: "relative" }}
     >
       <span className="inline-block text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-blue-300">
         <Typewriter
-          words={["Web Developer", "Frontend Developer", "Responsive Designer,", "Blog Post", "Social Media Management"]}
+          words={[
+            "Web Developer",
+            "Frontend Developer",
+            "Responsive Designer",
+            "Blog Writer",
+            "Social Media Management",
+          ]}
           loop={0}
           cursor
           cursorStyle="|"
@@ -25,7 +31,14 @@ const TypewriterComponent = () => {
         />
       </span>
       <motion.div
-        className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"
+        style={{
+          position: "absolute",
+          bottom: "-0.25rem",
+          left: 0,
+          width: "100%",
+          height: "0.125rem",
+          background: "linear-gradient(to right, #60A5FA, #a78bfa)",
+        }}
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
