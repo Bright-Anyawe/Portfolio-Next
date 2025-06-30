@@ -1,3 +1,0 @@
-# Remove pnpm-specific fields and keep only npm-compatible configuration
-# If you want to use npm workspaces, use package.json "workspaces" field instead
-# This file can be deleted if you are not using pnpm
