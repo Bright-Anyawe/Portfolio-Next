@@ -5,4 +5,3 @@ packages:
   - 'app'
   - 'lib'
   - 'posts'
-  - 'portfolio@0.1.0'
