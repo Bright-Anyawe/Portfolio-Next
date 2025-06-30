@@ -1,3 +1,7 @@
 ignoredBuiltDependencies:
   - typeit
   - unrs-resolver
+packages:
+  - 'app'
+  - 'lib'
+  - 'posts'
