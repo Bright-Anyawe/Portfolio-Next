@@ -4,7 +4,7 @@
   "private": true,
   "description": "Bridging the gap between design and functionality. I leverage my expertise in React, Next.js, and modern web technologies to create robust and scalable frontend architectures, ensuring optimal performance and accessibility.",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "next dev",
