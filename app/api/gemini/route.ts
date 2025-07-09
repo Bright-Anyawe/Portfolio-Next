@@ -41,7 +41,7 @@ function searchPortfolio(data: any, query: string): string {
 
 export async function POST(req: NextRequest) {
   const { message, history } = await req.json();
-  const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     return NextResponse.json({ reply: "Error: Gemini API key is missing." }, { status: 500 });
   }

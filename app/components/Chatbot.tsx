@@ -2,18 +2,12 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaComments, FaTimes, FaPaperPlane } from "react-icons/fa";
+import { QUICK_REPLIES, INITIAL_PROMPT, GREETING_PROMPT } from "./chatbotData";
 
 interface Message {
   sender: "user" | "bot";
   text: string;
 }
-
-const QUICK_REPLIES = [
-  "Show me your projects",
-  "Tell me about your experience",
-  "What skills do you have?",
-  "Contact info",
-];
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
@@ -36,9 +30,7 @@ export default function Chatbot() {
         setMessages([
           {
             sender: "bot",
-            text: name
-              ? `Hi ${name}! How can I help you today?`
-              : "Hi! What's your name?",
+            text: INITIAL_PROMPT(name),
           },
         ]);
       }, 300);
@@ -61,7 +53,7 @@ export default function Chatbot() {
           ...msgs,
           {
             sender: "bot",
-            text: `Nice to meet you, ${userMsg}! How can I help you today?`,
+            text: GREETING_PROMPT(userMsg),
           },
         ]);
         setLoading(false);
@@ -93,6 +85,13 @@ export default function Chatbot() {
     if (e.key === "Enter" && !loading) sendMessage();
   }
 
+  function clearChat() {
+    setMessages([]);
+    setName(null);
+    setError("");
+    setLoading(false);
+  }
+
   return (
     <div>
       {/* Floating Chat Button */}
@@ -112,92 +111,106 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-6 right-6 z-50 w-80 max-w-[95vw] bg-gray-900 text-white rounded-xl shadow-2xl flex flex-col"
+            className="fixed bottom-0 left-0 right-0 top-0 z-50 flex items-end justify-center sm:items-end sm:justify-end pointer-events-none"
+            style={{ background: "rgba(0,0,0,0.15)" }}
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-accent rounded-t-xl">
-              <span className="font-semibold">Chatbot</span>
-              <button onClick={() => setOpen(false)} aria-label="Close Chatbot">
-                <FaTimes size={20} />
-              </button>
-            </div>
-            {/* Messages */}
-            <div
-              className="flex-1 overflow-y-auto px-4 py-2 space-y-2"
-              style={{ maxHeight: 320 }}
-            >
-              {messages.map((msg, i) => (
-                <div
-                  key={i}
-                  className={`flex ${
-                    msg.sender === "user" ? "justify-end" : "justify-start"
-                  }`}
-                >
-                  <div
-                    className={`px-3 py-2 rounded-lg max-w-[80%] text-sm shadow
-                      ${
-                        msg.sender === "user"
-                          ? "bg-accent text-white"
-                          : "bg-gray-800 text-white/90"
-                      }`}
-                  >
-                    {msg.text}
-                  </div>
+            <div className="w-full max-w-[95vw] sm:w-80 bg-gray-900 text-white rounded-t-xl sm:rounded-xl shadow-2xl flex flex-col pointer-events-auto mb-0 sm:mb-6 sm:mr-6">
+              {/* Header */}
+              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-700 bg-accent rounded-t-xl">
+                <span className="font-semibold">Chatbot</span>
+                <div className="flex items-center gap-2">
+                  <button onClick={clearChat} aria-label="Clear Chat" className="text-sm px-2 py-1 rounded-md bg-gray-700 hover:bg-gray-600 transition">
+                    Clear Chat
+                  </button>
+                  <button onClick={() => setOpen(false)} aria-label="Close Chatbot">
+                    <FaTimes size={20} />
+                  </button>
                 </div>
-              ))}
-              {loading && (
-                <div className="flex justify-start">
-                  <div className="px-3 py-2 rounded-lg bg-gray-800 text-white/70 text-sm animate-pulse">
-                    <span>Typing...</span>
+              </div>
+              {/* Messages */}
+              <div
+                className="flex-1 overflow-y-auto px-4 py-2 space-y-2"
+                style={{ maxHeight: 320 }}
+              >
+                {messages.map((msg, i) => (
+                  <div
+                    key={i}
+                    className={`flex ${
+                      msg.sender === "user" ? "justify-end" : "justify-start"
+                    }`}
+                  >
+                    <div
+                      className={`px-3 py-2 rounded-lg max-w-[80%] text-sm shadow
+                        ${
+                          msg.sender === "user"
+                            ? "bg-accent text-white"
+                            : "bg-gray-800 text-white/90"
+                        }`}
+                    >
+                      {msg.text}
+                    </div>
                   </div>
+                ))}
+                {loading && (
+                  <div className="flex justify-start">
+                    <div className="px-3 py-2 rounded-lg bg-gray-800 text-white/70 text-sm animate-pulse">
+                      <span>Typing...</span>
+                    </div>
+                  </div>
+                )
+                  <div className="flex justify-start">
+                    <div className="px-3 py-2 rounded-lg bg-gray-800 text-white/70 text-sm animate-pulse">
+                      <span>Typing...</span>
+                    </div>
+                  </div>
+                )}
+                <div ref={messagesEndRef} />
+              </div>
+              {/* Error Message */}
+              {error && (
+                <div className="px-4 py-2 text-red-400 text-sm bg-gray-950 border-t border-red-700">
+                  {error}
                 </div>
               )}
-              <div ref={messagesEndRef} />
-            </div>
-            {/* Error Message */}
-            {error && (
-              <div className="px-4 py-2 text-red-400 text-sm bg-gray-950 border-t border-red-700">
-                {error}
+              {/* Quick Replies */}
+              {name && (
+                <div className="flex overflow-x-auto gap-2 px-4 py-2 border-t border-gray-700 bg-gray-950 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                  {QUICK_REPLIES.map((q) => (
+                    <button
+                      key={q}
+                      className="flex-shrink-0 bg-accent/20 text-accent px-3 py-1 rounded-full text-xs hover:bg-accent/40 transition whitespace-nowrap"
+                      onClick={() => sendMessage(q)}
+                      disabled={loading}
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {/* Input */}
+              <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-700 bg-gray-950 rounded-b-xl">
+                <input
+                  type="text"
+                  className="flex-1 bg-transparent outline-none text-white placeholder:text-white/50"
+                  placeholder={
+                    name ? "Type your message..." : "Enter your name..."
+                  }
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  disabled={loading}
+                  aria-label="Chat message input"
+                  autoFocus
+                />
+                <button
+                  onClick={() => sendMessage()}
+                  disabled={loading || !input.trim()}
+                  className="p-2 rounded-full bg-accent hover:bg-accent/80 transition disabled:opacity-50"
+                  aria-label="Send message"
+                >
+                  <FaPaperPlane size={18} />
+                </button>
               </div>
-            )}
-            {/* Quick Replies */}
-            {name && (
-              <div className="flex overflow-x-auto gap-2 px-4 py-2 border-t border-gray-700 bg-gray-950 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                {QUICK_REPLIES.map((q) => (
-                  <button
-                    key={q}
-                    className="flex-shrink-0 bg-accent/20 text-accent px-3 py-1 rounded-full text-xs hover:bg-accent/40 transition whitespace-nowrap"
-                    onClick={() => sendMessage(q)}
-                    disabled={loading}
-                  >
-                    {q}
-                  </button>
-                ))}
-              </div>
-            )}
-            {/* Input */}
-            <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-700 bg-gray-950 rounded-b-xl">
-              <input
-                type="text"
-                className="flex-1 bg-transparent outline-none text-white placeholder:text-white/50"
-                placeholder={
-                  name ? "Type your message..." : "Enter your name..."
-                }
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                disabled={loading}
-                aria-label="Chat message input"
-                autoFocus
-              />
-              <button
-                onClick={() => sendMessage()}
-                disabled={loading || !input.trim()}
-                className="p-2 rounded-full bg-accent hover:bg-accent/80 transition disabled:opacity-50"
-                aria-label="Send message"
-              >
-                <FaPaperPlane size={18} />
-              </button>
             </div>
           </motion.div>
         )}
