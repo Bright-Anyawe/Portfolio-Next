@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import WelcomePopup from "./WelcomePopup";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaComments, FaTimes, FaPaperPlane } from "react-icons/fa";
 import { QUICK_REPLIES, INITIAL_PROMPT, GREETING_PROMPT } from "./chatbotData";
@@ -16,6 +17,7 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [name, setName] = useState<string | null>(null);
+  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Scroll to bottom on new message
@@ -25,7 +27,7 @@ export default function Chatbot() {
 
   // Greet user by name if provided
   useEffect(() => {
-    if (open && messages.length === 0) {
+    if (open && messages.length === 0 && !showWelcomePopup) {
       setTimeout(() => {
         setMessages([
           {
@@ -35,21 +37,21 @@ export default function Chatbot() {
         ]);
       }, 300);
     }
-  }, [open, name, messages.length]);
+  }, [open, name, messages.length, showWelcomePopup]);
 
   // Handle user input and conversation memory
   async function sendMessage(msg?: string) {
     setError("");
     const userMsg = (msg ?? input).trim();
     if (!userMsg) return;
-    setMessages((msgs) => [...msgs, { sender: "user", text: userMsg }]);
+    setMessages((msgs: Message[]) => [...msgs, { sender: "user", text: userMsg }]);
     setInput("");
     setLoading(true);
     try {
       // If name not set, treat first message as name
       if (!name) {
         setName(userMsg);
-        setMessages((msgs) => [
+        setMessages((msgs: Message[]) => [
           ...msgs,
           {
             sender: "bot",
@@ -70,7 +72,7 @@ export default function Chatbot() {
       });
       const data = await response.json();
       if (response.ok) {
-        setMessages((msgs) => [...msgs, { sender: "bot", text: data.reply }]);
+        setMessages((msgs: Message[]) => [...msgs, { sender: "bot", text: data.reply }]);
       } else {
         setError(data.reply || "Something went wrong.");
       }
@@ -92,8 +94,25 @@ export default function Chatbot() {
     setLoading(false);
   }
 
+  const handleStartChatFromPopup = (userName: string) => {
+    setName(userName);
+    setOpen(true);
+    setMessages([
+      {
+        sender: "bot",
+        text: GREETING_PROMPT(userName),
+      },
+    ]);
+  };
+
   return (
     <div>
+      {showWelcomePopup && (
+        <WelcomePopup
+          onClose={() => setShowWelcomePopup(false)}
+          onStartChat={handleStartChatFromPopup}
+        />
+      )}
       {/* Floating Chat Button */}
       <button
         className="fixed bottom-6 right-6 z-50 bg-accent text-white p-4 rounded-full shadow-lg hover:bg-accent/90 transition-all"
@@ -103,6 +122,10 @@ export default function Chatbot() {
       >
         <FaComments size={28} />
       </button>
+
+      {/* Welcome Popup */}
+
+
       {/* Chat Window */}
       <AnimatePresence>
         {open && (
@@ -157,12 +180,7 @@ export default function Chatbot() {
                       <span>Typing...</span>
                     </div>
                   </div>
-                )
-                  <div className="flex justify-start">
-                    <div className="px-3 py-2 rounded-lg bg-gray-800 text-white/70 text-sm animate-pulse">
-                      <span>Typing...</span>
-                    </div>
-                  </div>
+
                 )}
                 <div ref={messagesEndRef} />
               </div>
