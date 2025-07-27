@@ -17,7 +17,13 @@ export default function Chatbot() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [name, setName] = useState<string | null>(null);
-  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
+  // Initialize from localStorage
+  const [showWelcomePopup, setShowWelcomePopup] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("welcomePopupDismissed") !== "true";
+    }
+    return true;
+  });
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Scroll to bottom on new message
@@ -94,6 +100,14 @@ export default function Chatbot() {
     setLoading(false);
   }
 
+  // Ensure localStorage is updated when popup is closed
+  const handleCloseWelcomePopup = () => {
+    setShowWelcomePopup(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("welcomePopupDismissed", "true");
+    }
+  };
+
   const handleStartChatFromPopup = (userName: string) => {
     setName(userName);
     setOpen(true);
@@ -103,13 +117,18 @@ export default function Chatbot() {
         text: GREETING_PROMPT(userName),
       },
     ]);
+    // Dismiss popup and persist
+    setShowWelcomePopup(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("welcomePopupDismissed", "true");
+    }
   };
 
   return (
     <div>
       {showWelcomePopup && (
         <WelcomePopup
-          onClose={() => setShowWelcomePopup(false)}
+          onClose={handleCloseWelcomePopup}
           onStartChat={handleStartChatFromPopup}
         />
       )}
