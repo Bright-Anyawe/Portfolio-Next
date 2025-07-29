@@ -9,6 +9,38 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { useState } from 'react';
 
 const projects = [
+
+  {
+    src: '/assets/b-k numbers images.png',
+      live: 'https://b-k-numbers.vercel.app/',
+      gitHubLink: 'https://github.com/Bright-Anyawe/B-K-Numbers',
+    alt: 'B-K-Numbers',
+    tools: `HTML 5, Tailwind(CSS3), React(Next.js), PostgreSQL, Prisma ORM, Neon db`,
+    title: 'B-K-Numbers(Full-Stack)',
+    description:
+      "B-K-Numbers is a web application that allows users to users to buy virsual numbers, manage orders, and their wallet. It features user authentication, a dashboard, and more.",
+  },
+  {
+    src: '/assets/Quiz-gaurd image.png',
+      live: 'https://quizguard-pro.vercel.app/',
+      gitHubLink: 'https://github.com/Bright-Anyawe/QuizGuard-Pro',
+    alt: 'QuizGuard-Pro',
+    tools: `HTML 5, Tailwind(CSS3), React(Next.js), PostgreSQL, Prisma ORM, Neon db`,
+    title: 'QuizGuard-Pro(Full-Stack)',
+    description:
+      "QuizGuard-Pro is a web application that allows users to create and take quizzes.",
+  },
+  {
+    src: '/assets/devato-institute-image.png',
+      live: 'https://devato-computing-training-institue.vercel.app/',
+      gitHubLink: 'https://github.com/Bright-Anyawe/Devato-Computing-Training-Institute',
+    alt: 'Devato-Computing-Training-Institute',
+    tools: `HTML 5, Tailwind(CSS3), React(Next.js)`,
+    title: 'Devato-Computing-Training-Institute(Frontend)',
+    description:
+      "Devato-Computing-Training-Institute is a web application that allows users to enroll in courses, view courses, and more.",
+  },
+
   {
     src: '/assets/EHR.jpg',
     live: 'https://akorabo-l-6kmyiauh6-bright-anyawes-projects.vercel.app/',

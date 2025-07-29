@@ -9,8 +9,8 @@ import Script from "next/script";
 
 export default function Home() {
   const stats = [
-    { value: "28", label: "Months of experience" },
-    { value: "7", label: "Projects completed" },
+    { value: "32", label: "Months of experience" },
+    { value: "10", label: "Projects completed" },
     { value: "1", label: "Language Learnt" },
   ];
   
