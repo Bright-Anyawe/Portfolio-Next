@@ -92,27 +92,8 @@ const projects = [
     description:
       'This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost',
   },
-  {
-    src: '/assets/Microscopic visioneer.webp',
-    live: 'https://wsi-viewer-2.vercel.app/',
-    gitHubLink: 'https://github.com/Bright-Anyawe/wsi-viewer',
-    alt: 'Whole Slide Image',
-    tools: `HTML 5, CSS3,  React[Nextjs]`,
-    title: 'Whole Slide Image Viewer',
-    description:
-      'This project was designed to showcase my skills in an internship. It includes a zoom feature, a slide feature, and a slide bar. to help health care to undertake experiments.',
-  },
 
-  {
-    src: '/assets/fruits.jpeg',
-    live: 'https://fruit-lelo.vercel.app/',
-    gitHubLink: 'https://github.com/Bright-Anyawe/Fruit-lelo',
-    alt: 'Skill Test dashboard',
-    tools: `HTML 5, CSS3,  React`,
-    title: 'A fruit-lelo website',
-    description:
-      'This project is a fruit-lelo website that was designed to showcase my skills in web development in Css3, Html5, and React',
-  },
+
 ];
 
 const Projects = () => {
