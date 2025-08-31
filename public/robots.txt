@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anyawe-optimize.vercel.app/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+Allow: /
+Allow: /about
+Allow: /projects
+Allow: /contact
+Allow: /blog
+Allow: /locations/tema
+Allow: /locations/golf-city

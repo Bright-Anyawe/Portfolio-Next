@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anyawe Bright | Top Full Stack Developer in Tema & Golf City",
     description: "Leading full stack developer in Tema and Golf City, specializing in HTML5, CSS3, JavaScript, ReactJS, NextJS, Prisma ORM, PostgreSQL, SQL, and Neon DB. Expert in building robust, scalable, and high-performance web applications.",
-    url: "https://anyawe-bright-portfolio.vercel.app/",
+    url: "https://anyawe-optimize.vercel.app/",
     images: "/assets/In person-portfolio-face-edit.jpg",
     type: "website",
     locale: "en_GH",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://anyawe-bright-portfolio.vercel.app",
+    canonical: "https://anyawe-optimize.vercel.app",
   },
   verification: {
     google: "google36f14d228da91455",

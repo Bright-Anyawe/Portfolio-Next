@@ -37,7 +37,7 @@ export default function Home() {
               "latitude": "5.6037",
               "longitude": "-0.0170"
             },
-            "url": "https://anyawe-bright-portfolio.vercel.app",
+            "url": "https://anyawe-optimize.vercel.app/",
             "telephone": "+233-059-417-2522",
             "priceRange": "$$ or cedis",
             "openingHoursSpecification": {
@@ -71,7 +71,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Anyawe Bright",
-            "url": "https://anyawe-bright-portfolio.vercel.app",
+            "url": "https://anyawe-optimize.vercel.app/",
             "image": "/assets/In person-portfolio-face-edit.jpg",
             "sameAs": [
               "https://github.com/Bright-Anyawe",
