@@ -23,8 +23,15 @@ Disallow: /node_modules/
 # Allow important pages
 Allow: /
 Allow: /about
+Allow: /services
 Allow: /projects
 Allow: /contact
 Allow: /blog
+Allow: /services/web-development
+Allow: /services/graphic-design
+Allow: /services/mobile-apps
+Allow: /services/video-editing
+Allow: /services/social-media
+Allow: /services/digital-marketing
 Allow: /locations/tema
 Allow: /locations/golf-city
