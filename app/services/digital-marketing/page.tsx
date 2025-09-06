@@ -8,7 +8,7 @@ import {
   FaGoogle, 
   FaEnvelope, 
   FaChartLine, 
-  FaTarget,
+  FaBullseye,
   FaCheck,
   FaStar,
   FaArrowRight,
@@ -165,7 +165,7 @@ const DigitalMarketingPage = () => {
       metric: "Conversion Rate",
       value: "+65%",
       description: "Improvement in conversion rates",
-      icon: <FaTarget className="text-3xl text-purple-500" />
+      icon: <FaBullseye className="text-3xl text-purple-500" />
     },
     {
       metric: "ROI",
