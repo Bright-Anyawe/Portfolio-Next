@@ -1,8 +1,10 @@
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://anyawe-optimize.vercel.app/sitemap.xml
 
+# Specific bot configurations
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
@@ -11,10 +13,14 @@ User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
+# Disallow sensitive areas
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
+Disallow: /.env*
+Disallow: /node_modules/
 
+# Allow important pages
 Allow: /
 Allow: /about
 Allow: /projects
