@@ -4,7 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion"; // Import motion
 import { PersonalImage } from "@/app/components/PersonalImage";
 import "@/app/styles/about.css"; // Keep your custom styles if needed
-import TypewriterComponent from "@/app/components/TypeWriter"; // Assuming this is your typewriter
+import TypewriterComponent from "@/app/components/TypeWriter";
+import QuoteButton from "@/app/components/QuoteButton";
 
 import {
   FaGraduationCap,
@@ -203,6 +204,24 @@ export default function About() {
                   I thrive on challenges and enjoy turning complex ideas into
                   intuitive user experiences.
                 </p>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <QuoteButton
+                    service="web-development"
+                    variant="secondary"
+                    size="lg"
+                    className="bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600"
+                  >
+                    Let's Work Together
+                  </QuoteButton>
+                  <a
+                    href="/Resume.v2.4.docx.pdf"
+                    download
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-500 text-red-500 font-bold rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300"
+                  >
+                    Download Resume
+                  </a>
+                </div>
               </motion.div>
             )}
             {/* --- Education Content --- */}

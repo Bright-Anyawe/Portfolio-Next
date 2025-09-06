@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import SuccessNotification from "../components/SuccessNotification";
+import MobileContactForm from "../components/MobileContactForm";
+import QuoteButton from "../components/QuoteButton";
 import Script from "next/script";
 
 export default function Contact() {
@@ -69,11 +71,31 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-center mb-8 sm:mb-12"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold text-blue-300 mb-3 sm:mb-4">Contact Me</h1>
-            <p className="text-gray-300 text-base sm:text-lg">
-              Looking for web development services in Tema or Golf City? Let&apos;s discuss your project.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-white">Contact</span>{" "}
+              <span className="text-gradient bg-gradient-to-r from-red-500 to-purple-500 bg-clip-text text-transparent">
+                Me
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Looking for creative digital solutions in Tema or Golf City? Let's discuss your project 
+              and transform your ideas into reality.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <QuoteButton
+                service="web-development"
+                variant="secondary"
+                size="lg"
+                className="bg-gradient-to-r from-red-500 to-purple-500 hover:from-red-600 hover:to-purple-600"
+              >
+                Get Quick Quote
+              </QuoteButton>
+            </div>
           </motion.div>
+
+          <div className="mb-16">
+            <MobileContactForm />
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             <motion.div

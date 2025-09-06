@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import QuoteButton from "@/app/components/QuoteButton";
+import PriceDisplay from "@/app/components/PriceDisplay";
+import ResponsiveGrid from "@/app/components/ResponsiveGrid";
 import { 
   FaCode, 
   FaRocket, 
@@ -65,7 +67,7 @@ const WebDevelopmentPage = () => {
   const packages = [
     {
       name: "Starter Website",
-      price: "$500",
+      price: 500,
       description: "Perfect for small businesses and personal brands",
       features: [
         "5-page responsive website",
@@ -79,7 +81,7 @@ const WebDevelopmentPage = () => {
     },
     {
       name: "Business Website",
-      price: "$1,200",
+      price: 1200,
       description: "Ideal for growing businesses and e-commerce",
       features: [
         "10-page responsive website",
@@ -95,7 +97,7 @@ const WebDevelopmentPage = () => {
     },
     {
       name: "Enterprise Solution",
-      price: "$2,500+",
+      price: 2500,
       description: "Custom solutions for large businesses",
       features: [
         "Unlimited pages",
@@ -204,7 +206,7 @@ const WebDevelopmentPage = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Why Choose My Web Development Services?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ResponsiveGrid columns={{ sm: 1, md: 2, lg: 3 }} gap="lg">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -219,7 +221,7 @@ const WebDevelopmentPage = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
-          </div>
+          </ResponsiveGrid>
         </motion.div>
 
         {/* Technologies Section */}
@@ -272,7 +274,7 @@ const WebDevelopmentPage = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-12">
             Web Development Packages
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ResponsiveGrid columns={{ sm: 1, md: 2, lg: 3 }} gap="lg">
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -294,7 +296,14 @@ const WebDevelopmentPage = () => {
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                <div className="text-4xl font-bold text-blue-500 mb-4">{pkg.price}</div>
+                <div className="mb-4">
+                  <PriceDisplay 
+                    usdPrice={pkg.price} 
+                    size="lg" 
+                    layout="vertical"
+                    className="text-blue-500"
+                  />
+                </div>
                 <p className="text-gray-300 mb-6">{pkg.description}</p>
                 <ul className="space-y-3 mb-8">
                   {pkg.features.map((feature, idx) => (
@@ -314,7 +323,7 @@ const WebDevelopmentPage = () => {
                 </QuoteButton>
               </motion.div>
             ))}
-          </div>
+          </ResponsiveGrid>
         </motion.div>
 
         {/* Portfolio Section */}

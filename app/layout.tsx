@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideNav from "./components/SideNav";
+import MobileNavigation from "./components/MobileNavigation";
 import PageTransition from "./components/PageTransition";
 import Providers from "./components/Providers";
 import Chatbot from "./components/Chatbot";
 import WhatsAppButton from "./components/WhatsAppButton";
+import PWAFeatures from "./components/PWAFeatures";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -83,7 +85,9 @@ export default function RootLayout({
                 {children}
                 {/* Chatbot floating widget */}
                 <Chatbot />
+                <MobileNavigation />
                 <WhatsAppButton />
+                <PWAFeatures />
               </div>
             </div>
           </PageTransition>

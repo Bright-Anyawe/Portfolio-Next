@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaCalculator, FaWhatsapp, FaCheck } from "react-icons/fa";
+import { FaCalculator, FaWhatsapp, FaCheck, FaExchangeAlt } from "react-icons/fa";
 import { openWhatsAppQuote } from "@/app/utils/whatsapp";
+import { formatDualPrice } from "@/app/utils/currency";
 
 interface ServiceOption {
   id: string;
@@ -41,6 +42,7 @@ const QuoteCalculator = () => {
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
   const [projectComplexity, setProjectComplexity] = useState<number>(1);
   const [isOpen, setIsOpen] = useState(false);
+  const [showGHS, setShowGHS] = useState(false);
 
   const complexityMultipliers = {
     1: { name: 'Basic', multiplier: 1, description: 'Simple requirements' },
@@ -156,7 +158,12 @@ const QuoteCalculator = () => {
                   >
                     <div className="font-semibold text-white">{service.name}</div>
                     <div className="text-sm text-gray-400 mb-2">{service.description}</div>
-                    <div className="text-blue-400 font-bold">From ${service.basePrice}</div>
+                    <div className="text-blue-400 font-bold">
+                      From {showGHS 
+                        ? formatDualPrice(service.basePrice).ghs 
+                        : formatDualPrice(service.basePrice).usd
+                      }
+                    </div>
                   </button>
                 ))}
               </div>
@@ -233,7 +240,19 @@ const QuoteCalculator = () => {
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <div className="text-sm text-gray-400">Estimated Total</div>
-                    <div className="text-4xl font-bold text-white">${calculateTotal()}</div>
+                    <div className="text-4xl font-bold text-white">
+                      {showGHS 
+                        ? formatDualPrice(calculateTotal()).ghs 
+                        : formatDualPrice(calculateTotal()).usd
+                      }
+                    </div>
+                    <button
+                      onClick={() => setShowGHS(!showGHS)}
+                      className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-gray-300 transition-colors duration-200 mt-2"
+                    >
+                      <FaExchangeAlt className="text-xs" />
+                      Switch to {showGHS ? 'USD' : 'GHS'}
+                    </button>
                     <div className="text-sm text-gray-400">*Final price may vary based on specific requirements</div>
                   </div>
                   <button

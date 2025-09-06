@@ -5,7 +5,11 @@ import DownloadButton from "./components/Button";
 import TypewriterComponent from "./components/TypeWriter";
 import WelcomePopup from "./components/WelcomePopup";
 import Testimonials from "./components/Testimonials";
+import TestimonialsAdvanced from "./components/TestimonialsAdvanced";
 import ServicesShowcase from "./components/ServicesShowcase";
+import QuoteCalculator from "./components/QuoteCalculator";
+import PerformanceStats from "./components/PerformanceStats";
+import ContactCTA from "./components/ContactCTA";
 import Script from "next/script";
 
 export default function Home() {
@@ -181,7 +185,10 @@ export default function Home() {
       </section>
 
       <ServicesShowcase />
-      <Testimonials />
+      <QuoteCalculator />
+      <PerformanceStats />
+      <TestimonialsAdvanced />
+      <ContactCTA />
     </main>
   );
 }
