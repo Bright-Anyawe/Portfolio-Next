@@ -5,13 +5,15 @@ import DownloadButton from "./components/Button";
 import TypewriterComponent from "./components/TypeWriter";
 import WelcomePopup from "./components/WelcomePopup";
 import Testimonials from "./components/Testimonials";
+import ServicesShowcase from "./components/ServicesShowcase";
 import Script from "next/script";
 
 export default function Home() {
   const stats = [
-    { value: "32", label: "Months of experience" },
-    { value: "10", label: "Projects completed" },
-    { value: "1", label: "Language Learnt" },
+    { value: "32+", label: "Months of Experience" },
+    { value: "50+", label: "Projects Completed" },
+    { value: "6", label: "Creative Services" },
+    { value: "100%", label: "Client Satisfaction" },
   ];
   
   return (
@@ -78,7 +80,7 @@ export default function Home() {
               "https://www.linkedin.com/in/bright-anyawe-772b46324/",
               "https://x.com/BAnyawe78129"
             ],
-            "jobTitle": "Frontend Developer",
+            "jobTitle": "Creative Digital Solutions Expert",
             "worksFor": {
               "@type": "Organization",
               "name": "Freelance"
@@ -108,10 +110,10 @@ export default function Home() {
           </div>
 
           <h2 className="text-red-500 text-xl xl:text-2xl 2xl:text-3xl">
-            Leading Full Stack Developer in Tema & Golf City
+            Creative Digital Solutions Expert | From Code to Canvas
           </h2>
           <p className="IntroType max-w-[80vw] xl:max-w-[500px] 2xl:max-w-[600px] mb-9 text-white text-lg xl:text-xl 2xl:text-2xl leading-relaxed">
-            Looking for a skilled full stack developer in Tema or Golf City? I specialize in building robust, scalable, and high-performance web applications using HTML5, CSS3, JavaScript, ReactJS, NextJS, Prisma ORM, PostgreSQL, SQL, and Neon DB. With expertise in both frontend and backend technologies, I help businesses and individuals establish a strong online presence and deliver complete end-to-end solutions. Whether you need a new website, a complex web application, or improvements to your existing digital platform, I&apos;m here to help. Based in Tema, I&apos;m available for both local and remote projects.
+            Transform your digital presence with comprehensive creative solutions! I'm a multi-disciplinary creative professional specializing in <span className="text-accent font-semibold">Web Development</span>, <span className="text-accent font-semibold">Graphic Design</span>, <span className="text-accent font-semibold">Mobile App Development</span>, <span className="text-accent font-semibold">Video Editing</span>, <span className="text-accent font-semibold">Social Media Management</span>, and <span className="text-accent font-semibold">Digital Marketing</span>. From stunning visual designs to powerful web applications, I deliver complete digital transformation solutions that drive results. Based in Tema & Golf City, serving clients globally.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center xl:justify-start mb-6">
@@ -178,6 +180,7 @@ export default function Home() {
         </div>
       </section>
 
+      <ServicesShowcase />
       <Testimonials />
     </main>
   );

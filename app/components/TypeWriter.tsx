@@ -14,11 +14,15 @@ const TypewriterComponent = () => {
       <span className="inline-block text-2xl xl:text-3xl 2xl:text-4xl font-semibold text-blue-300">
         <Typewriter
           words={[
+            "Creative Digital Expert",
             "Web Developer",
-            "Frontend Developer",
-            "Responsive Designer",
-            "Blog Writer",
-            "Social Media Management",
+            "Graphic Designer",
+            "Mobile App Developer",
+            "Video Editor",
+            "Social Media Manager",
+            "Digital Marketer",
+            "UI/UX Designer",
+            "Brand Strategist",
           ]}
           loop={0}
           cursor

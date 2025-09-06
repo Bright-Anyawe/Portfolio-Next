@@ -7,38 +7,43 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FaCode, FaPaintBrush, FaMobile, FaVideo, FaHashtag, FaBullhorn, FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 const projects = [
-
+  // Web Development Projects
   {
     src: '/assets/b-k numbers images.png',
-      live: 'https://b-k-numbers.vercel.app/',
-      gitHubLink: 'https://github.com/Bright-Anyawe/B-K-Numbers',
+    live: 'https://b-k-numbers.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/B-K-Numbers',
     alt: 'B-K-Numbers',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js), PostgreSQL, Prisma ORM, Neon db`,
     title: 'B-K-Numbers(Full-Stack)',
-    description:
-      "B-K-Numbers is a web application that allows users to users to buy virsual numbers, manage orders, and their wallet. It features user authentication, a dashboard, and more.",
+    description: "B-K-Numbers is a web application that allows users to users to buy virsual numbers, manage orders, and their wallet. It features user authentication, a dashboard, and more.",
+    category: 'web-development',
+    featured: true
   },
   {
     src: '/assets/Quiz-gaurd image.png',
-      live: 'https://quizguard-pro.vercel.app/',
-      gitHubLink: 'https://github.com/Bright-Anyawe/QuizGuard-Pro',
+    live: 'https://quizguard-pro.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/QuizGuard-Pro',
     alt: 'QuizGuard-Pro',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js), PostgreSQL, Prisma ORM, Neon db`,
     title: 'QuizGuard-Pro(Full-Stack)',
-    description:
-      "QuizGuard-Pro is a web application that allows users to create and take quizzes.",
+    description: "QuizGuard-Pro is a web application that allows users to create and take quizzes.",
+    category: 'web-development',
+    featured: true
   },
   {
     src: '/assets/devato-institute-image.png',
-      live: 'https://devato-computing-training-institue.vercel.app/',
-      gitHubLink: 'https://github.com/Bright-Anyawe/Devato-Computing-Training-Institute',
+    live: 'https://devato-computing-training-institue.vercel.app/',
+    gitHubLink: 'https://github.com/Bright-Anyawe/Devato-Computing-Training-Institute',
     alt: 'Devato-Computing-Training-Institute',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js)`,
     title: 'Devato-Computing-Training-Institute(Frontend)',
-    description:
-      "Devato-Computing-Training-Institute is a web application that allows users to enroll in courses, view courses, and more.",
+    description: "Devato-Computing-Training-Institute is a web application that allows users to enroll in courses, view courses, and more.",
+    category: 'web-development',
+    featured: false
   },
 
   {
@@ -48,18 +53,20 @@ const projects = [
     alt: 'Electronic Health Record (EHR) system',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js)`,
     title: ' Electronic Health Record (EHR) system',
-    description:
-      'Developed a lightweight Electronic Health Record (EHR) system for a clinic, designed to streamline the management of patient data. The application allows staff to securely create, update, and retrieve patient records, ensuring data privacy and integrity.',
+    description: 'Developed a lightweight Electronic Health Record (EHR) system for a clinic, designed to streamline the management of patient data. The application allows staff to securely create, update, and retrieve patient records, ensuring data privacy and integrity.',
+    category: 'web-development',
+    featured: false
   },
-   {
+  {
     src: '/assets/not-authorized.png',
     live: 'https://inde-book.vercel.app/',
     gitHubLink: 'https://inde-book.vercel.app/',
     alt: 'E-books',
     tools: `HTML 5, CSS3, React, Nextjs`,
     title: 'E-Books Website(IndE-books)',
-    description:
-      'As a Frontend Intern at University of Phoenix Group (UPG), I contributed to developing an E-book website. I implemented an AI-powered chatbot to enhance user engagement with real-time feedback and designed a responsive carousel to improve interface interaction',
+    description: 'As a Frontend Intern at University of Phoenix Group (UPG), I contributed to developing an E-book website. I implemented an AI-powered chatbot to enhance user engagement with real-time feedback and designed a responsive carousel to improve interface interaction',
+    category: 'web-development',
+    featured: false
   },
   {
     src: '/assets/e-commerce-platform-landing-page.avif',
@@ -68,10 +75,10 @@ const projects = [
     alt: 'E-commerce website',
     tools: `HTML 5, CSS3, React`,
     title: 'E-commerce Store',
-    description:
-      'Scalable React application with dynamic product pages, cart functionality, and authentication.',
+    description: 'Scalable React application with dynamic product pages, cart functionality, and authentication.',
+    category: 'web-development',
+    featured: false
   },
- 
   {
     src: '/assets/image.png',
     alt: 'Figma design',
@@ -79,8 +86,9 @@ const projects = [
     gitHubLink: 'https://github.com/Bright-Anyawe/Figma_design',
     tools: `HTML 5, CSS3`,
     title: 'Figma Design Website',
-    description:
-      'This project is a figma design website that was designed for Yottanet company clients',
+    description: 'This project is a figma design website that was designed for Yottanet company clients',
+    category: 'graphic-design',
+    featured: false
   },
   {
     src: '/assets/golf-estate-assembly.jpg',
@@ -89,23 +97,133 @@ const projects = [
     alt: 'Golf Estate Assembly(Pentecostal Church)',
     tools: `HTML 5, CSS3, React`,
     title: 'Golf Estate Assembly',
-    description:
-      'This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost',
+    description: 'This project was designed to showcase my skills in web development in Css3, Html5, and React, Nextjs, and Tailwindcss to create CMS for the church of pentecost',
+    category: 'web-development',
+    featured: false
   },
+  
+  // Graphic Design Projects (Placeholder - Add real projects)
+  {
+    src: '/assets/brand-identity-mockup.jpg',
+    live: '#',
+    gitHubLink: '#',
+    alt: 'Brand Identity Design',
+    tools: 'Adobe Illustrator, Photoshop, Figma',
+    title: 'Tech Startup Brand Identity',
+    description: 'Complete brand identity package including logo, business cards, and brand guidelines for innovative tech startup.',
+    category: 'graphic-design',
+    featured: true
+  },
+  
+  // Video Editing Projects (Placeholder - Add real projects)
+  {
+    src: '/assets/video-editing-thumbnail.jpg',
+    live: '#',
+    gitHubLink: '#',
+    alt: 'Promotional Video',
+    tools: 'Adobe Premiere Pro, After Effects',
+    title: 'Product Launch Video',
+    description: 'Engaging promotional video for product launch with motion graphics and professional editing.',
+    category: 'video-editing',
+    featured: true
+  },
+  
+  // Social Media Projects (Placeholder - Add real projects)
+  {
+    src: '/assets/social-media-campaign.jpg',
+    live: '#',
+    gitHubLink: '#',
+    alt: 'Social Media Campaign',
+    tools: 'Canva, Hootsuite, Facebook Business Manager',
+    title: 'Social Media Campaign',
+    description: 'Comprehensive social media campaign that increased engagement by 200% and followers by 150%.',
+    category: 'social-media',
+    featured: true
+  },
+  
+  // Digital Marketing Projects (Placeholder - Add real projects)
+  {
+    src: '/assets/marketing-dashboard.jpg',
+    live: '#',
+    gitHubLink: '#',
+    alt: 'Digital Marketing Campaign',
+    tools: 'Google Ads, Analytics, SEMrush',
+    title: 'Lead Generation Campaign',
+    description: 'Digital marketing campaign that generated 300+ qualified leads with 400% ROI.',
+    category: 'digital-marketing',
+    featured: true
+  }
 
 
 ];
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  const categories = [
+    { id: 'all', name: 'All Projects', icon: <FaCode /> },
+    { id: 'web-development', name: 'Web Development', icon: <FaCode /> },
+    { id: 'graphic-design', name: 'Graphic Design', icon: <FaPaintBrush /> },
+    { id: 'mobile-apps', name: 'Mobile Apps', icon: <FaMobile /> },
+    { id: 'video-editing', name: 'Video Editing', icon: <FaVideo /> },
+    { id: 'social-media', name: 'Social Media', icon: <FaHashtag /> },
+    { id: 'digital-marketing', name: 'Digital Marketing', icon: <FaBullhorn /> }
+  ];
+  
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0">
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          {}
+    <section className="min-h-screen py-12">
+      <div className="container mx-auto px-6 max-w-7xl">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="text-white">My</span>{" "}
+            <span className="text-gradient bg-gradient-to-r from-red-500 to-purple-500 bg-clip-text text-transparent">
+              Portfolio
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            Explore my diverse portfolio showcasing expertise across web development, 
+            graphic design, mobile apps, video editing, social media, and digital marketing.
+          </p>
+        </motion.div>
 
-          {}
+        {/* Category Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-12"
+        >
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-gradient-to-r from-red-500 to-purple-500 text-white'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
+                }`}
+              >
+                {category.icon}
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Featured Projects Carousel */}
+        <div className="flex flex-col xl:flex-row xl:gap-[30px] mb-16">
           <div className="w-full xl:w-[50%]">
             <Swiper
               modules={[Navigation, Pagination]}
