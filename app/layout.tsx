@@ -15,27 +15,25 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: "Anyawe Bright | Creative Digital Solutions Expert | Web Design, Graphics, Video & Marketing",
-  description: "Creative Digital Solutions Expert in Tema & Golf City. Specializing in Web Development, Graphic Design, Mobile Apps, Video Editing, Social Media Management & Digital Marketing. Transform your brand with comprehensive creative solutions that drive results.",
+  title: "Anyawe Bright | Full‑stack Developer (Next.js, React, PostgreSQL) | Tema, Ghana",
+  description:
+    "Full‑stack developer in Tema, Ghana (open to remote). Builds modern web apps with Next.js/React and PostgreSQL, focusing on UX, performance, and reliable integrations. Featured projects: B‑K‑Numbers and Rising Soul School.",
   keywords: [
-    "Creative digital solutions Tema",
-    "Graphic designer Golf City Ghana",
+    "Full-stack developer Ghana",
+    "Next.js developer Ghana",
+    "React developer Ghana",
+    "PostgreSQL developer",
+    "Prisma developer",
     "Web developer Tema",
-    "Mobile app developer Ghana",
-    "Video editor Tema Golf City",
-    "Social media manager Ghana",
-    "Digital marketing expert Tema",
     "UI UX designer Ghana",
-    "Brand designer Golf City",
-    "Logo design Tema",
     "Website design Ghana",
-    "Creative agency Tema",
     "Anyawe Bright",
-    "Multi-disciplinary designer Ghana"
+    "Software engineer Ghana"
   ],
   openGraph: {
-    title: "Anyawe Bright | Creative Digital Solutions Expert | Complete Digital Transformation",
-    description: "Creative Digital Solutions Expert offering Web Development, Graphic Design, Mobile Apps, Video Editing, Social Media Management & Digital Marketing in Tema & Golf City. Complete digital transformation solutions.",
+    title: "Anyawe Bright | Full‑stack Developer (Next.js, React, PostgreSQL)",
+    description:
+      "Full‑stack developer building modern web apps with Next.js/React and PostgreSQL, focused on UX, performance, and reliability. Featured: B‑K‑Numbers and Rising Soul School.",
     url: "https://anyawe-optimize.vercel.app/",
     images: "/assets/In person-portfolio-face-edit.jpg",
     type: "website",
@@ -44,8 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anyawe Bright | Creative Digital Solutions Expert | Web Design, Graphics, Video & Marketing",
-    description: "Creative Digital Solutions Expert in Tema & Golf City. Web Development, Graphic Design, Mobile Apps, Video Editing, Social Media Management & Digital Marketing services. Transform your brand today!",
+    title: "Anyawe Bright | Full‑stack Developer (Next.js, React, PostgreSQL)",
+    description:
+      "Full‑stack developer (Tema, Ghana) building modern web apps with Next.js/React and PostgreSQL. Open to remote roles.",
     images: "/assets/Anyawe Img.jpg",
   },
   robots: {

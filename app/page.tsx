@@ -64,7 +64,8 @@ export default function Home() {
               "https://github.com/Bright-Anyawe",
               "https://www.linkedin.com/in/bright-anyawe-772b46324/",
               "https://x.com/BAnyawe78129"
-            ]
+            ],
+            "email": "anyawe.work@gmail.com"
           })
         }}
       />
@@ -114,11 +115,32 @@ export default function Home() {
           </div>
 
           <h2 className="text-red-500 text-xl xl:text-2xl 2xl:text-3xl">
-            Creative Digital Solutions Expert | From Code to Canvas
+            Full‑stack Developer (Next.js / React / PostgreSQL) — open to full‑time & contract roles
           </h2>
           <p className="IntroType max-w-[80vw] xl:max-w-[500px] 2xl:max-w-[600px] mb-9 text-white text-lg xl:text-xl 2xl:text-2xl leading-relaxed">
-            Transform your digital presence with comprehensive creative solutions! I'm a multi-disciplinary creative professional specializing in <span className="text-accent font-semibold">Web Development</span>, <span className="text-accent font-semibold">Graphic Design</span>, <span className="text-accent font-semibold">Mobile App Development</span>, <span className="text-accent font-semibold">Video Editing</span>, <span className="text-accent font-semibold">Social Media Management</span>, and <span className="text-accent font-semibold">Digital Marketing</span>. From stunning visual designs to powerful web applications, I deliver complete digital transformation solutions that drive results. Based in Tema & Golf City, serving clients globally.
+            I build modern web apps end‑to‑end with strong UX, clean architecture, and reliable integrations. Recent work includes <span className="text-accent font-semibold">B‑K‑Numbers</span> (full‑stack platform with auth, dashboard, orders & wallet flow) and <span className="text-accent font-semibold">Rising Soul School</span> (modern school site focused on clarity, trust, and conversions). Based in Tema, Ghana — available remotely.
           </p>
+
+          <div className="flex flex-wrap gap-3 justify-center xl:justify-start mb-6">
+            <a
+              href="mailto:anyawe.work@gmail.com"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition"
+            >
+              Email: anyawe.work@gmail.com
+            </a>
+            <a
+              href="/projects"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gradient-to-r from-red-500 to-purple-500 text-white font-bold hover:opacity-95 transition"
+            >
+              View Projects
+            </a>
+            <a
+              href="/engineering-notes"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition"
+            >
+              Engineering Notes
+            </a>
+          </div>
 
           <div className="flex flex-wrap gap-4 justify-center xl:justify-start mb-6">
             <a

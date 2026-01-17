@@ -8,6 +8,7 @@ import {
   FaUser, 
   FaCog, 
   FaProjectDiagram, 
+  FaBookOpen,
   FaBlog, 
   FaEnvelope,
   FaBars,
@@ -51,6 +52,11 @@ const navItems: NavItem[] = [
     title: "Projects",
     href: "/projects",
     icon: <FaProjectDiagram className="w-5 h-5" />
+  },
+  {
+    title: "Engineering Notes",
+    href: "/engineering-notes",
+    icon: <FaBookOpen className="w-5 h-5" />
   },
   {
     title: "Blog",

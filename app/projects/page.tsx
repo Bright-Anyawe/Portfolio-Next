@@ -18,9 +18,14 @@ const projects = [
     gitHubLink: "#",
     alt: "Rising Soul School",
     tools: "Next.js, React, Tailwind CSS",
-    title: "Rising Soul School (Frontend)",
+    title: "Rising Soul School (Full‑stack direction)",
     description:
-      "School website for Rising Soul School: admissions info, staff listing, and contact details with a clean modern layout.",
+      "Modern school website with clear navigation for admissions, staff, and contact — built for speed, clarity, and trust.",
+    highlights: [
+      "Information architecture that makes admissions + contact easy to find",
+      "Responsive layout and SEO-friendly structure for discoverability",
+      "Clean UI with consistent spacing and accessible interaction states",
+    ],
     category: "web-development",
     featured: true,
   },
@@ -31,7 +36,13 @@ const projects = [
     alt: 'B-K-Numbers',
     tools: `HTML 5, Tailwind(CSS3), React(Next.js), PostgreSQL, Prisma ORM, Neon db`,
     title: 'B-K-Numbers(Full-Stack)',
-    description: "B-K-Numbers is a web application that allows users to users to buy virsual numbers, manage orders, and their wallet. It features user authentication, a dashboard, and more.",
+    description:
+      "Full‑stack platform for buying virtual numbers with login/signup, wallet flow, and an admin-friendly dashboard.",
+    highlights: [
+      "Auth + protected dashboard experience",
+      "Orders + wallet management UI for a clear user flow",
+      "PostgreSQL + Prisma-backed data layer (Neon)",
+    ],
     category: 'web-development',
     featured: true
   },
@@ -279,12 +290,21 @@ const Projects = () => {
                 {projects[activeIndex].title}
               </h2>
               <p className="description text-white/60">{projects[activeIndex].description}</p>
+
+              {Array.isArray((projects as any)[activeIndex]?.highlights) && (
+                <ul className="mt-4 space-y-2 text-white/70 list-disc pl-5">
+                  {(projects as any)[activeIndex].highlights.map((h: string) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+              )}
               <ul className="flex gap-4 text-red-500">
                 <li className="text-xl text-accent">{projects[activeIndex].tools},</li>
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].live}`}>
+                {projects[activeIndex].live && projects[activeIndex].live !== "#" && (
+                  <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].live}`}>
                   <button className="relative w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 hover:bg-accent">
                     <svg
                       stroke="currentColor"
@@ -306,9 +326,13 @@ const Projects = () => {
                       Live
                     </span>
                   </button>
-                </a>
+                  </a>
+                )}
 
-                <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].gitHubLink}`}>
+                {projects[activeIndex].gitHubLink &&
+                  projects[activeIndex].gitHubLink !== "#" &&
+                  projects[activeIndex].gitHubLink !== projects[activeIndex].live && (
+                    <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].gitHubLink}`}>
                   <button className="relative w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 hover:bg-accent">
                     <svg
                       stroke="currentColor"
@@ -327,7 +351,8 @@ const Projects = () => {
                       GitHub
                     </span>
                   </button>
-                </a>
+                    </a>
+                  )}
               </div>
             </div>
           </div>
