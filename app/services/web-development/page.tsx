@@ -124,7 +124,7 @@ const WebDevelopmentPage = () => {
     {
       title: "Rising Soul School",
       description: "School website showcasing programs, staff, admissions, and contact information",
-      image: "/assets/og-image.avif",
+      image: "/assets/logo(rising soul).jpg",
       technologies: ["Next.js", "React", "Tailwind CSS"],
       link: "https://rising-soul.vercel.app/"
     },

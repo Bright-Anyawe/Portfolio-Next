@@ -13,7 +13,7 @@ import { FaCode, FaPaintBrush, FaMobile, FaVideo, FaHashtag, FaBullhorn, FaExter
 const projects = [
   // Web Development Projects
   {
-    src: "/assets/og-image.avif",
+    src: "/assets/logo(rising soul).jpg",
     live: "https://rising-soul.vercel.app/",
     gitHubLink: "#",
     alt: "Rising Soul School",

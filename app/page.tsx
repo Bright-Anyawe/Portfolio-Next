@@ -19,6 +19,33 @@ export default function Home() {
     { value: "6", label: "Creative Services" },
     { value: "100%", label: "Client Satisfaction" },
   ];
+
+  const featuredProjects = [
+    {
+      title: "Rising Soul School",
+      subtitle: "Modern school website (UX + clarity)",
+      live: "https://rising-soul.vercel.app/",
+      github: "",
+      stack: ["Next.js", "React", "Tailwind CSS"],
+      bullets: [
+        "Clear admissions + contact flow designed for conversions",
+        "Responsive layout with modern, clean UI and accessibility-minded interactions",
+        "SEO-friendly structure for discoverability",
+      ],
+    },
+    {
+      title: "B‑K‑Numbers",
+      subtitle: "Full‑stack platform (auth + dashboard + wallet)",
+      live: "https://b-k-numbers.vercel.app/",
+      github: "https://github.com/Bright-Anyawe/B-K-Numbers",
+      stack: ["Next.js", "PostgreSQL", "Prisma", "Neon", "Tailwind CSS"],
+      bullets: [
+        "Authentication + protected dashboard experience",
+        "Orders + wallet management flow built for clarity and trust",
+        "PostgreSQL + Prisma-backed data layer (Neon)",
+      ],
+    },
+  ];
   
   return (
     <main>
@@ -200,6 +227,81 @@ export default function Home() {
                 <p className="max-w-[200px] leading-snug text-red-500 text-lg xl:text-xl 2xl:text-2xl">
                   {stat.label}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects (Recruiter view) */}
+      <section className="py-14">
+        <div className="container mx-auto max-w-screen-2xl px-6">
+          <div className="flex items-end justify-between gap-6 flex-wrap mb-8">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+                Featured Projects
+              </h2>
+              <p className="text-gray-300 mt-2">
+                The two projects I’d love you to review first.
+              </p>
+            </div>
+            <a
+              href="/projects"
+              className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition"
+            >
+              View all projects
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {featuredProjects.map((p) => (
+              <div
+                key={p.title}
+                className="bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/60 transition"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{p.title}</h3>
+                    <p className="text-white/70 mt-1">{p.subtitle}</p>
+                  </div>
+                  <div className="flex gap-2 shrink-0">
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-xl bg-gradient-to-r from-red-500 to-purple-500 text-white font-semibold hover:opacity-95 transition"
+                    >
+                      Live
+                    </a>
+                    {p.github ? (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 rounded-xl border border-white/20 text-white font-semibold hover:bg-white/10 transition"
+                      >
+                        GitHub
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {p.stack.map((s) => (
+                    <span
+                      key={s}
+                      className="text-xs px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/80"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+
+                <ul className="mt-5 space-y-2 text-white/75 list-disc pl-5">
+                  {p.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
