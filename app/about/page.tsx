@@ -215,8 +215,8 @@ export default function About() {
                     Let's Work Together
                   </QuoteButton>
                   <a
-                    href="/Resume.v2.4.docx.pdf"
-                    download
+                    href="/Resume.pdf"
+                    download="Anyawe-Bright-Resume.pdf"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-red-500 text-red-500 font-bold rounded-xl hover:bg-red-500 hover:text-white transition-all duration-300"
                   >
                     Download Resume

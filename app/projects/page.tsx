@@ -13,6 +13,18 @@ import { FaCode, FaPaintBrush, FaMobile, FaVideo, FaHashtag, FaBullhorn, FaExter
 const projects = [
   // Web Development Projects
   {
+    src: "/assets/og-image.avif",
+    live: "https://rising-soul.vercel.app/",
+    gitHubLink: "#",
+    alt: "Rising Soul School",
+    tools: "Next.js, React, Tailwind CSS",
+    title: "Rising Soul School (Frontend)",
+    description:
+      "School website for Rising Soul School: admissions info, staff listing, and contact details with a clean modern layout.",
+    category: "web-development",
+    featured: true,
+  },
+  {
     src: '/assets/b-k numbers images.png',
     live: 'https://b-k-numbers.vercel.app/',
     gitHubLink: 'https://github.com/Bright-Anyawe/B-K-Numbers',
@@ -271,12 +283,9 @@ const Projects = () => {
                 <li className="text-xl text-accent">{projects[activeIndex].tools},</li>
               </ul>
               <div className="border border-white/20"></div>
-              <div className="flex items-ce
-              nter gap-4">
-                {}
-                <a target="_blank" href={`${projects[activeIndex].live}`}>
+              <div className="flex items-center gap-4">
+                <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].live}`}>
                   <button className="relative w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 hover:bg-accent">
-                    {}
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
@@ -299,10 +308,8 @@ const Projects = () => {
                   </button>
                 </a>
 
-                {}
-                <a target="_blank" href={`${projects[activeIndex].gitHubLink}`}>
+                <a target="_blank" rel="noopener noreferrer" href={`${projects[activeIndex].gitHubLink}`}>
                   <button className="relative w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 hover:bg-accent">
-                    {}
                     <svg
                       stroke="currentColor"
                       fill="currentColor"

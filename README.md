@@ -15,6 +15,38 @@ Anyawe Bright
 Languages and Tools:
 css3  figma firebase git github html5 javascript nextjs  react tailwind
 
+## Local setup (Gemini chatbot)
+
+This project’s chatbot calls a server route at `app/api/gemini/route.ts`.
+
+It supports a **provider chain** so the chatbot keeps working:
+
+- **Gemini** (if `GEMINI_API_KEY` is set)
+- **Groq** (hosted alternative, if `GROQ_API_KEY` is set)
+- **Offline fallback** (no-AI, always available)
+
+- **Create `.env.local`** (recommended):
+  - Copy `env.example` → `.env.local`
+  - Set:
+    - `GEMINI_API_KEY="..."` (preferred), or `GOOGLE_API_KEY="..."`
+    - Optional: `GROQ_API_KEY="..."`
+- **Restart dev server** after changing env vars:
+  - `npm run dev`
+
+## Production setup (Vercel)
+
+Set the environment variable in your Vercel project settings (Environment Variables):
+
+- `GEMINI_API_KEY` (or `GOOGLE_API_KEY`)
+- Optional: `GROQ_API_KEY`
+
+Then redeploy.
+
+## Security notes (important)
+
+- **Do not paste keys/secrets in chat or commits.**
+- If a key/secret was exposed, **rotate it** (create a new one and replace it in `.env.local` / Vercel).
+
 ## Automated Code Quality
 
 This project includes GitHub Actions workflows that automatically:

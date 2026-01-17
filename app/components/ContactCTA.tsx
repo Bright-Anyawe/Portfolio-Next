@@ -19,9 +19,9 @@ const ContactCTA = () => {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email",
       description: "Detailed project discussions",
-      value: "hello@anyawebright.com",
+      value: "anyawe.work@gmail.com",
       action: "Send Email",
-      href: "mailto:hello@anyawebright.com",
+      href: "mailto:anyawe.work@gmail.com",
       color: "from-blue-500 to-blue-600"
     },
     {

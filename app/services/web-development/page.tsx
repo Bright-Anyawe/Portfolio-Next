@@ -122,6 +122,13 @@ const WebDevelopmentPage = () => {
       link: "https://b-k-numbers.vercel.app/"
     },
     {
+      title: "Rising Soul School",
+      description: "School website showcasing programs, staff, admissions, and contact information",
+      image: "/assets/og-image.avif",
+      technologies: ["Next.js", "React", "Tailwind CSS"],
+      link: "https://rising-soul.vercel.app/"
+    },
+    {
       title: "QuizGuard Pro",
       description: "Interactive quiz platform with real-time scoring and user management",
       image: "/assets/Quiz-gaurd image.png",

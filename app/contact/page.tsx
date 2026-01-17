@@ -126,7 +126,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-base sm:text-lg font-medium text-gray-200">Email</h3>
-                    <p className="text-sm sm:text-base text-gray-400">brightanyawe55@gmail.com</p>
+                    <p className="text-sm sm:text-base text-gray-400">anyawe.work@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 sm:gap-4">

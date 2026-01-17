@@ -262,7 +262,7 @@ const MobileContactForm = () => {
               WhatsApp
             </a>
             <a
-              href="mailto:hello@anyawebright.com"
+              href="mailto:anyawe.work@gmail.com"
               className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-200"
             >
               <FaEnvelope />
