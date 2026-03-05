@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     canonical: "https://anyawe-optimize.vercel.app",
   },
   verification: {
-    google: "google36f14d228da91455",
+    google: "keo4zDdgGMjaoTODbyc0axRGieHN9n3FMmdez30VuWA",
   },
 };
 
