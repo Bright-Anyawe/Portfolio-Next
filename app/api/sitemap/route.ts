@@ -43,6 +43,12 @@ export async function GET() {
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>${baseUrl}/engineering-notes</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>${baseUrl}/locations/tema</loc>
     <lastmod>${currentDate}</lastmod>
     <changefreq>monthly</changefreq>

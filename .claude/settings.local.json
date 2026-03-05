@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la /c/Users/brigh/webDev/Portfolio-Next/app/*.ts)",
+      "Bash(npx next build)"
+    ]
+  }
+}

@@ -56,9 +56,10 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Anyawe Bright - Frontend Development Services",
-            "image": "/assets/In person-portfolio-face-edit.jpg",
-            "description": "Professional frontend development services in Tema and Golf City, specializing in React, Next.js, and modern web technologies.",
+            "name": "Optisware — Anyawe Bright Software Development",
+            "alternateName": ["Optisware", "Optis", "Anyawe Optimize", "Anyawe Bright", "Bright Anyawe"],
+            "image": "/assets/optimize.jpeg",
+            "description": "Optisware — Professional software development services by Anyawe Bright in Tema and Golf City, Ghana. Specializing in optimized React, Next.js, and modern web technologies.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Tema",
@@ -92,7 +93,20 @@ export default function Home() {
               "https://www.linkedin.com/in/bright-anyawe-772b46324/",
               "https://x.com/BAnyawe78129"
             ],
-            "email": "anyawe.work@gmail.com"
+            "email": "anyawe.work@gmail.com",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Software & Creative Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video Editing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Content Creation" } }
+              ]
+            }
           })
         }}
       />
@@ -105,18 +119,44 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Anyawe Bright",
+            "alternateName": ["Bright Anyawe", "Anya", "Anyawe", "Bright"],
             "url": "https://anyawe-optimize.vercel.app/",
-            "image": "/assets/In person-portfolio-face-edit.jpg",
+            "image": "/assets/optimize.jpeg",
             "sameAs": [
               "https://github.com/Bright-Anyawe",
               "https://www.linkedin.com/in/bright-anyawe-772b46324/",
               "https://x.com/BAnyawe78129"
             ],
-            "jobTitle": "Creative Digital Solutions Expert",
-            "worksFor": {
-              "@type": "Organization",
-              "name": "Freelance"
-            },
+            "jobTitle": "Full-stack Software Developer",
+            "knowsAbout": ["Software Development", "Next.js", "React", "PostgreSQL", "Web Optimization", "AI Content Creation", "Graphic Design", "Mobile App Development", "Video Editing", "Digital Marketing"],
+            "worksFor": [
+              {
+                "@type": "Organization",
+                "name": "Optisware",
+                "alternateName": ["Optis", "Anyawe Optimize"],
+                "url": "https://anyawe-optimize.vercel.app/"
+              },
+              {
+                "@type": "Organization",
+                "name": "Benbaxco",
+                "url": "https://www.benbaxco.com/"
+              },
+              {
+                "@type": "Organization",
+                "name": "Rising Soul School",
+                "url": "https://rising-soul.vercel.app/"
+              },
+              {
+                "@type": "Organization",
+                "name": "Cognitionus",
+                "url": "https://www.cognitionus.com/"
+              },
+              {
+                "@type": "Organization",
+                "name": "B-K-Numbers",
+                "url": "https://b-k-numbers.vercel.app/"
+              }
+            ],
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Tema",
@@ -228,6 +268,38 @@ export default function Home() {
                   {stat.label}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Companies I've Worked With */}
+      <section className="py-14">
+        <div className="container mx-auto max-w-screen-2xl px-6">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-6 text-center xl:text-left">
+            Companies I&apos;ve Worked With
+          </h2>
+          <div className="flex flex-wrap gap-6 justify-center xl:justify-start">
+            {[
+              { name: "Benbaxco", url: "https://www.benbaxco.com/" },
+              { name: "Rising Soul School", url: "https://rising-soul.vercel.app/" },
+              { name: "Cognitionus", url: "https://www.cognitionus.com/" },
+              { name: "B-K-Numbers", url: "https://b-k-numbers.vercel.app/" },
+            ].map((company) => (
+              <a
+                key={company.name}
+                href={company.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-6 py-4 bg-gray-800/40 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-gray-500/60 transition group"
+              >
+                <span className="text-lg font-semibold text-white group-hover:text-red-400 transition-colors">
+                  {company.name}
+                </span>
+                <svg className="w-4 h-4 text-gray-400 group-hover:text-red-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             ))}
           </div>
         </div>

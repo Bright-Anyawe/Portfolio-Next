@@ -27,6 +27,7 @@ Allow: /services
 Allow: /projects
 Allow: /contact
 Allow: /blog
+Allow: /engineering-notes
 Allow: /services/web-development
 Allow: /services/graphic-design
 Allow: /services/mobile-apps

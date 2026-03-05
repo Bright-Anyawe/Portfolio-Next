@@ -10,8 +10,8 @@ export const PersonalImage = () => {
       {}
       <div className="absolute w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] rounded-full overflow-hidden">
         <Image
-          src="/assets/In person-portfolio-face-edit.jpg"
-          alt="Anyawe"
+          src="/assets/optimize.jpeg"
+          alt="Anyawe Bright - Software Developer"
           fill
           sizes="(max-width: 768px) 250px, (max-width: 1024px) 400px, 506px"
           objectFit="cover"
